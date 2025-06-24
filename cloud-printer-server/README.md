@@ -13,6 +13,10 @@ A Node.js backend service for managing print orders, partner integrations, and w
 - Structured logging with Winston
 - Docker support
 - Health monitoring
+- Audit logging for security events
+- DNS validation for custom domains
+- White-label branding customization
+- Rate limiting and CORS protection
 
 ## Prerequisites
 
@@ -71,6 +75,11 @@ Start the development server:
 npm run dev
 ```
 
+Build the TypeScript code:
+```bash
+npm run build
+```
+
 ## Docker Setup
 
 1. Build and start services:
@@ -95,25 +104,27 @@ http://localhost:3000/api-docs
 ### Orders
 
 - `POST /v1/orders` - Create a new order
-- `GET /v1/orders` - List orders
+- `GET /v1/orders` - List orders with pagination
 - `GET /v1/orders/:orderId` - Get order details
 - `PATCH /v1/orders/:orderId` - Update order status
-
-### Settings
-
-- `POST /v1/settings/forwarding` - Configure webhook forwarding
-- `GET /v1/settings` - Get partner settings
-- `PATCH /v1/settings` - Update partner settings
 
 ### Onboarding
 
 - `POST /v1/onboarding/create` - Create new partner account
-- `POST /v1/onboarding/validate` - Validate partner credentials
+- `POST /v1/onboarding/validate-domain/:domain` - Validate domain DNS setup
+- `PUT /v1/onboarding/:partnerId/branding` - Update partner branding settings
+- `POST /v1/onboarding/:partnerId/rotate-key` - Rotate partner API key
+- `POST /v1/onboarding/validate-key` - Validate API key
+- `GET /v1/onboarding/:partnerId/status` - Get partner onboarding status
 
 ### Webhooks
 
 - `POST /v1/webhooks/shopify` - Shopify webhook endpoint
+  - Handles order creation and cancellation
+  - Validates webhook signatures
 - `POST /v1/webhooks/woocommerce` - WooCommerce webhook endpoint
+  - Handles order creation and cancellation
+  - Validates webhook signatures
 
 ## Testing
 
@@ -125,7 +136,11 @@ npm test
 ## Monitoring
 
 - Health check endpoint: `GET /health`
-- Logs are stored in the `logs` directory
+- Logs are stored in the `logs` directory:
+  - `combined.log` - All logs
+  - `error.log` - Error logs only
+  - `exceptions.log` - Uncaught exceptions
+  - `rejections.log` - Unhandled promise rejections
 - Error tracking with Sentry (when configured)
 
 ## Security
@@ -135,6 +150,9 @@ npm test
 - Secure headers with Helmet
 - Input validation with Zod
 - CORS protection
+- Audit logging for security events
+- Webhook signature validation
+- API key rotation support
 
 ## License
 
