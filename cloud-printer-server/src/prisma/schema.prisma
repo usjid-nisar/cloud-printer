@@ -24,6 +24,7 @@ model Partner {
   integrations      Integration[]
   dnsRecords        DnsRecord[]
   routingSettings   RoutingSettings?
+  users             User[]         // Added relation field for User model
 }
 
 model Order {
@@ -99,4 +100,41 @@ model AuditLog {
 
   @@index([eventType])
   @@index([partnerId])
+}
+
+// User model for authentication
+model User {
+  id            String    @id @default(uuid())
+  email         String    @unique
+  password      String    // Hashed password
+  role          String    // admin or client
+  partnerId     String?   // Only for client users
+  partner       Partner?  @relation(fields: [partnerId], references: [id])
+  firstName     String?
+  lastName      String?
+  lastLoginAt   DateTime?
+  isActive      Boolean   @default(true)
+  sessions      Session[]
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  @@index([role])
+  @@index([partnerId])
+}
+
+// Session model for managing user sessions
+model Session {
+  id            String    @id @default(uuid())
+  userId        String
+  user          User      @relation(fields: [userId], references: [id])
+  token         String    @unique
+  expiresAt     DateTime
+  ipAddress     String?
+  userAgent     String?
+  isValid       Boolean   @default(true)
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  @@index([userId])
+  @@index([token])
 } 

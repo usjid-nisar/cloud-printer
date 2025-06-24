@@ -4,11 +4,13 @@ import { createHash } from 'crypto';
 import { AppError } from '../utils/AppError';
 import { logger } from '../utils/logger';
 import { AuditService, AuditEventType } from '../services/auditService';
+import { AuthService } from '../services/authService';
 
 const prisma = new PrismaClient();
 const auditService = new AuditService();
+const authService = new AuthService();
 
-// Extend Express Request type to include partner
+// Extend Express Request type to include partner and user
 declare global {
   namespace Express {
     interface Request {
@@ -17,6 +19,7 @@ declare global {
         name: string;
         email: string;
       };
+      user?: any;
     }
   }
 }
@@ -219,4 +222,67 @@ export const validateApiKey = async (
   } catch (error) {
     next(error);
   }
+};
+
+export const authenticate = async (
+  req: Request,
+  res: Response,
+  next: NextFunction
+) => {
+  try {
+    const token = req.headers.authorization?.split(' ')[1];
+
+    if (!token) {
+      throw new AppError('Authentication required', 401);
+    }
+
+    const user = await authService.validateSession(token);
+    if (!user) {
+      throw new AppError('Invalid or expired token', 401);
+    }
+
+    // Attach user to request
+    req.user = user;
+    next();
+  } catch (error) {
+    next(error);
+  }
+};
+
+export const requireRole = (roles: string[]) => {
+  return (req: Request, res: Response, next: NextFunction) => {
+    if (!req.user) {
+      return next(new AppError('Authentication required', 401));
+    }
+
+    if (!roles.includes(req.user.role)) {
+      return next(new AppError('Unauthorized access', 403));
+    }
+
+    next();
+  };
+};
+
+// Middleware to ensure client users can only access their partner's data
+export const restrictToPartner = (
+  req: Request,
+  res: Response,
+  next: NextFunction
+) => {
+  if (!req.user) {
+    return next(new AppError('Authentication required', 401));
+  }
+
+  // Admin can access all partner data
+  if (req.user.role === 'admin') {
+    return next();
+  }
+
+  // Client users can only access their partner's data
+  const requestedPartnerId = req.params.partnerId || req.body.partnerId;
+  if (req.user.partnerId !== requestedPartnerId) {
+    return next(new AppError('Unauthorized access', 403));
+  }
+
+  next();
 }; 

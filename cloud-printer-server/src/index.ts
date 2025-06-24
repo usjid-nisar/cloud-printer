@@ -17,6 +17,7 @@ import {
   unhandledRejectionHandler,
 } from './middleware/errorHandler';
 import { logger, stream } from './utils/logger';
+import authRoutes from './routes/authRoutes';
 
 // Initialize Prisma client
 const prisma = new PrismaClient();
@@ -81,9 +82,10 @@ const swaggerDocs = swaggerJsdoc(swaggerOptions);
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 
 // API routes
-app.use('/v1/onboarding', onboardingRoutes);
-app.use('/v1/orders', orderRoutes);
-app.use('/v1/webhooks', webhookRoutes);
+app.use('/api/auth', authRoutes);
+app.use('/api/onboarding', onboardingRoutes);
+app.use('/api/orders', orderRoutes);
+app.use('/api/webhooks', webhookRoutes);
 
 // Health check endpoint
 app.get('/health', (req, res) => {
