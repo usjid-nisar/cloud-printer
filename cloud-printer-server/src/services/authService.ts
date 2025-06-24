@@ -35,14 +35,20 @@ export class AuthService {
       throw new AppError('Email already exists', 400);
     }
 
-    // For client users, verify partner exists
-    if (input.role === 'client' && input.partnerId) {
+    // Validate partnerId based on role
+    if (input.role === 'client') {
+      if (!input.partnerId) {
+        throw new AppError('Partner ID is required for client users', 400);
+      }
       const partner = await prisma.partner.findUnique({
         where: { id: input.partnerId }
       });
       if (!partner) {
         throw new AppError('Invalid partner ID', 400);
       }
+    } else if (input.role === 'admin') {
+      // Admin users should not have a partnerId
+      delete input.partnerId;
     }
 
     // Hash password
