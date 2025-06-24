@@ -1,0 +1,62 @@
+// This is your Prisma schema file
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Partner {
+  id            String   @id @default(uuid())
+  name          String
+  email         String   @unique
+  apiKey        String   @unique
+  webhookUrl    String?
+  brandingData  Json?
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+  orders        Order[]
+  settings      Settings?
+  integrations  Integration[]
+}
+
+model Order {
+  id            String   @id @default(uuid())
+  partnerId     String
+  partner       Partner  @relation(fields: [partnerId], references: [id])
+  orderNumber   String
+  status        String
+  items         Json
+  customerData  Json
+  metadata      Json?
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  @@unique([partnerId, orderNumber])
+}
+
+model Settings {
+  id            String   @id @default(uuid())
+  partnerId     String   @unique
+  partner       Partner  @relation(fields: [partnerId], references: [id])
+  forwardingUrl String?
+  webhookSecret String?
+  preferences   Json?
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}
+
+model Integration {
+  id            String   @id @default(uuid())
+  partnerId     String
+  partner       Partner  @relation(fields: [partnerId], references: [id])
+  platform      String   // "shopify" or "woocommerce"
+  config        Json
+  status        String
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  @@unique([partnerId, platform])
+} 
