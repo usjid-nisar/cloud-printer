@@ -1,0 +1,2338 @@
+2025-06-24 19:27:53:2753 [31merror[39m: [31muncaughtException: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/validators/onboardingValidators.ts[0m:[93m53[0m:[93m38[0m - [91merror[0m[90m TS2339: [0mProperty 'required' does not exist on type 'ZodOptional<ZodObject<{ logo: ZodOptional<ZodObject<{ url: ZodString; width: ZodNumber; height: ZodNumber; }, "strip", ZodTypeAny, { url: string; width: number; height: number; }, { ...; }>>; colors: ZodOptional<...>; fonts: ZodOptional<...>; layout: ZodOptional<...>; }, "strip", ZodTypeAny, { ...; }, { ...; }>>'.[39m
+
+[31m[7m53[0m     brandingData: brandingDataSchema.required('Branding data is required'),[39m
+[31m[7m  [0m [91m                                     ~~~~~~~~[0m[39m
+
+[31mTSError: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/validators/onboardingValidators.ts[0m:[93m53[0m:[93m38[0m - [91merror[0m[90m TS2339: [0mProperty 'required' does not exist on type 'ZodOptional<ZodObject<{ logo: ZodOptional<ZodObject<{ url: ZodString; width: ZodNumber; height: ZodNumber; }, "strip", ZodTypeAny, { url: string; width: number; height: number; }, { ...; }>>; colors: ZodOptional<...>; fonts: ZodOptional<...>; layout: ZodOptional<...>; }, "strip", ZodTypeAny, { ...; }, { ...; }>>'.[39m
+
+[31m[7m53[0m     brandingData: brandingDataSchema.required('Branding data is required'),[39m
+[31m[7m  [0m [91m                                     ~~~~~~~~[0m[39m
+
+[31m    at createTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:859:12)[39m
+[31m    at reportTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:863:19)[39m
+[31m    at getOutput (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1077:36)[39m
+[31m    at Object.compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1433:41)[39m
+[31m    at Module.m._compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1617:30)[39m
+[31m    at loadTS (node:internal/modules/cjs/loader:1826:10)[39m
+[31m    at Object.require.extensions.<computed> [as .ts] (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1621:12)[39m
+[31m    at Module.load (node:internal/modules/cjs/loader:1469:32)[39m
+[31m    at Function._load (node:internal/modules/cjs/loader:1286:12)[39m
+[31m    at TracingChannel.traceSync (node:diagnostics_channel:322:14)[39m
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/validators/onboardingValidators.ts[0m:[93m53[0m:[93m38[0m - [91merror[0m[90m TS2339: [0mProperty 'required' does not exist on type 'ZodOptional<ZodObject<{ logo: ZodOptional<ZodObject<{ url: ZodString; width: ZodNumber; height: ZodNumber; }, "strip", ZodTypeAny, { url: string; width: number; height: number; }, { ...; }>>; colors: ZodOptional<...>; fonts: ZodOptional<...>; layout: ZodOptional<...>; }, "strip", ZodTypeAny, { ...; }, { ...; }>>'.
+
+[7m53[0m     brandingData: brandingDataSchema.required('Branding data is required'),
+[7m  [0m [91m                                     ~~~~~~~~[0m
+
+    at createTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1617:30)
+    at loadTS (node:internal/modules/cjs/loader:1826:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1469:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-06-24 19:27:53:2753 [31merror[39m: [31muncaughtException: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/validators/onboardingValidators.ts[0m:[93m53[0m:[93m38[0m - [91merror[0m[90m TS2339: [0mProperty 'required' does not exist on type 'ZodOptional<ZodObject<{ logo: ZodOptional<ZodObject<{ url: ZodString; width: ZodNumber; height: ZodNumber; }, "strip", ZodTypeAny, { url: string; width: number; height: number; }, { ...; }>>; colors: ZodOptional<...>; fonts: ZodOptional<...>; layout: ZodOptional<...>; }, "strip", ZodTypeAny, { ...; }, { ...; }>>'.[39m
+
+[31m[7m53[0m     brandingData: brandingDataSchema.required('Branding data is required'),[39m
+[31m[7m  [0m [91m                                     ~~~~~~~~[0m[39m
+
+[31mTSError: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/validators/onboardingValidators.ts[0m:[93m53[0m:[93m38[0m - [91merror[0m[90m TS2339: [0mProperty 'required' does not exist on type 'ZodOptional<ZodObject<{ logo: ZodOptional<ZodObject<{ url: ZodString; width: ZodNumber; height: ZodNumber; }, "strip", ZodTypeAny, { url: string; width: number; height: number; }, { ...; }>>; colors: ZodOptional<...>; fonts: ZodOptional<...>; layout: ZodOptional<...>; }, "strip", ZodTypeAny, { ...; }, { ...; }>>'.[39m
+
+[31m[7m53[0m     brandingData: brandingDataSchema.required('Branding data is required'),[39m
+[31m[7m  [0m [91m                                     ~~~~~~~~[0m[39m
+
+[31m    at createTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:859:12)[39m
+[31m    at reportTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:863:19)[39m
+[31m    at getOutput (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1077:36)[39m
+[31m    at Object.compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1433:41)[39m
+[31m    at Module.m._compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1617:30)[39m
+[31m    at loadTS (node:internal/modules/cjs/loader:1826:10)[39m
+[31m    at Object.require.extensions.<computed> [as .ts] (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1621:12)[39m
+[31m    at Module.load (node:internal/modules/cjs/loader:1469:32)[39m
+[31m    at Function._load (node:internal/modules/cjs/loader:1286:12)[39m
+[31m    at TracingChannel.traceSync (node:diagnostics_channel:322:14)[39m
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/validators/onboardingValidators.ts[0m:[93m53[0m:[93m38[0m - [91merror[0m[90m TS2339: [0mProperty 'required' does not exist on type 'ZodOptional<ZodObject<{ logo: ZodOptional<ZodObject<{ url: ZodString; width: ZodNumber; height: ZodNumber; }, "strip", ZodTypeAny, { url: string; width: number; height: number; }, { ...; }>>; colors: ZodOptional<...>; fonts: ZodOptional<...>; layout: ZodOptional<...>; }, "strip", ZodTypeAny, { ...; }, { ...; }>>'.
+
+[7m53[0m     brandingData: brandingDataSchema.required('Branding data is required'),
+[7m  [0m [91m                                     ~~~~~~~~[0m
+
+    at createTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1617:30)
+    at loadTS (node:internal/modules/cjs/loader:1826:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1469:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-06-24 19:28:24:2824 [31merror[39m: [31muncaughtException: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/validators/onboardingValidators.ts[0m:[93m53[0m:[93m38[0m - [91merror[0m[90m TS2339: [0mProperty 'required' does not exist on type 'ZodOptional<ZodObject<{ logo: ZodOptional<ZodObject<{ url: ZodString; width: ZodNumber; height: ZodNumber; }, "strip", ZodTypeAny, { url: string; width: number; height: number; }, { ...; }>>; colors: ZodOptional<...>; fonts: ZodOptional<...>; layout: ZodOptional<...>; }, "strip", ZodTypeAny, { ...; }, { ...; }>>'.[39m
+
+[31m[7m53[0m     brandingData: brandingDataSchema.required('Branding data is required'),[39m
+[31m[7m  [0m [91m                                     ~~~~~~~~[0m[39m
+
+[31mTSError: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/validators/onboardingValidators.ts[0m:[93m53[0m:[93m38[0m - [91merror[0m[90m TS2339: [0mProperty 'required' does not exist on type 'ZodOptional<ZodObject<{ logo: ZodOptional<ZodObject<{ url: ZodString; width: ZodNumber; height: ZodNumber; }, "strip", ZodTypeAny, { url: string; width: number; height: number; }, { ...; }>>; colors: ZodOptional<...>; fonts: ZodOptional<...>; layout: ZodOptional<...>; }, "strip", ZodTypeAny, { ...; }, { ...; }>>'.[39m
+
+[31m[7m53[0m     brandingData: brandingDataSchema.required('Branding data is required'),[39m
+[31m[7m  [0m [91m                                     ~~~~~~~~[0m[39m
+
+[31m    at createTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:859:12)[39m
+[31m    at reportTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:863:19)[39m
+[31m    at getOutput (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1077:36)[39m
+[31m    at Object.compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1433:41)[39m
+[31m    at Module.m._compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1617:30)[39m
+[31m    at loadTS (node:internal/modules/cjs/loader:1826:10)[39m
+[31m    at Object.require.extensions.<computed> [as .ts] (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1621:12)[39m
+[31m    at Module.load (node:internal/modules/cjs/loader:1469:32)[39m
+[31m    at Function._load (node:internal/modules/cjs/loader:1286:12)[39m
+[31m    at TracingChannel.traceSync (node:diagnostics_channel:322:14)[39m
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/validators/onboardingValidators.ts[0m:[93m53[0m:[93m38[0m - [91merror[0m[90m TS2339: [0mProperty 'required' does not exist on type 'ZodOptional<ZodObject<{ logo: ZodOptional<ZodObject<{ url: ZodString; width: ZodNumber; height: ZodNumber; }, "strip", ZodTypeAny, { url: string; width: number; height: number; }, { ...; }>>; colors: ZodOptional<...>; fonts: ZodOptional<...>; layout: ZodOptional<...>; }, "strip", ZodTypeAny, { ...; }, { ...; }>>'.
+
+[7m53[0m     brandingData: brandingDataSchema.required('Branding data is required'),
+[7m  [0m [91m                                     ~~~~~~~~[0m
+
+    at createTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1617:30)
+    at loadTS (node:internal/modules/cjs/loader:1826:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1469:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-06-24 19:28:24:2824 [31merror[39m: [31muncaughtException: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/validators/onboardingValidators.ts[0m:[93m53[0m:[93m38[0m - [91merror[0m[90m TS2339: [0mProperty 'required' does not exist on type 'ZodOptional<ZodObject<{ logo: ZodOptional<ZodObject<{ url: ZodString; width: ZodNumber; height: ZodNumber; }, "strip", ZodTypeAny, { url: string; width: number; height: number; }, { ...; }>>; colors: ZodOptional<...>; fonts: ZodOptional<...>; layout: ZodOptional<...>; }, "strip", ZodTypeAny, { ...; }, { ...; }>>'.[39m
+
+[31m[7m53[0m     brandingData: brandingDataSchema.required('Branding data is required'),[39m
+[31m[7m  [0m [91m                                     ~~~~~~~~[0m[39m
+
+[31mTSError: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/validators/onboardingValidators.ts[0m:[93m53[0m:[93m38[0m - [91merror[0m[90m TS2339: [0mProperty 'required' does not exist on type 'ZodOptional<ZodObject<{ logo: ZodOptional<ZodObject<{ url: ZodString; width: ZodNumber; height: ZodNumber; }, "strip", ZodTypeAny, { url: string; width: number; height: number; }, { ...; }>>; colors: ZodOptional<...>; fonts: ZodOptional<...>; layout: ZodOptional<...>; }, "strip", ZodTypeAny, { ...; }, { ...; }>>'.[39m
+
+[31m[7m53[0m     brandingData: brandingDataSchema.required('Branding data is required'),[39m
+[31m[7m  [0m [91m                                     ~~~~~~~~[0m[39m
+
+[31m    at createTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:859:12)[39m
+[31m    at reportTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:863:19)[39m
+[31m    at getOutput (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1077:36)[39m
+[31m    at Object.compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1433:41)[39m
+[31m    at Module.m._compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1617:30)[39m
+[31m    at loadTS (node:internal/modules/cjs/loader:1826:10)[39m
+[31m    at Object.require.extensions.<computed> [as .ts] (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1621:12)[39m
+[31m    at Module.load (node:internal/modules/cjs/loader:1469:32)[39m
+[31m    at Function._load (node:internal/modules/cjs/loader:1286:12)[39m
+[31m    at TracingChannel.traceSync (node:diagnostics_channel:322:14)[39m
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/validators/onboardingValidators.ts[0m:[93m53[0m:[93m38[0m - [91merror[0m[90m TS2339: [0mProperty 'required' does not exist on type 'ZodOptional<ZodObject<{ logo: ZodOptional<ZodObject<{ url: ZodString; width: ZodNumber; height: ZodNumber; }, "strip", ZodTypeAny, { url: string; width: number; height: number; }, { ...; }>>; colors: ZodOptional<...>; fonts: ZodOptional<...>; layout: ZodOptional<...>; }, "strip", ZodTypeAny, { ...; }, { ...; }>>'.
+
+[7m53[0m     brandingData: brandingDataSchema.required('Branding data is required'),
+[7m  [0m [91m                                     ~~~~~~~~[0m
+
+    at createTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1617:30)
+    at loadTS (node:internal/modules/cjs/loader:1826:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1469:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-06-24 19:28:41:2841 [31merror[39m: [31muncaughtException: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/validators/onboardingValidators.ts[0m:[93m53[0m:[93m38[0m - [91merror[0m[90m TS2339: [0mProperty 'required' does not exist on type 'ZodOptional<ZodObject<{ logo: ZodOptional<ZodObject<{ url: ZodString; width: ZodNumber; height: ZodNumber; }, "strip", ZodTypeAny, { url: string; width: number; height: number; }, { ...; }>>; colors: ZodOptional<...>; fonts: ZodOptional<...>; layout: ZodOptional<...>; }, "strip", ZodTypeAny, { ...; }, { ...; }>>'.[39m
+
+[31m[7m53[0m     brandingData: brandingDataSchema.required('Branding data is required'),[39m
+[31m[7m  [0m [91m                                     ~~~~~~~~[0m[39m
+
+[31mTSError: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/validators/onboardingValidators.ts[0m:[93m53[0m:[93m38[0m - [91merror[0m[90m TS2339: [0mProperty 'required' does not exist on type 'ZodOptional<ZodObject<{ logo: ZodOptional<ZodObject<{ url: ZodString; width: ZodNumber; height: ZodNumber; }, "strip", ZodTypeAny, { url: string; width: number; height: number; }, { ...; }>>; colors: ZodOptional<...>; fonts: ZodOptional<...>; layout: ZodOptional<...>; }, "strip", ZodTypeAny, { ...; }, { ...; }>>'.[39m
+
+[31m[7m53[0m     brandingData: brandingDataSchema.required('Branding data is required'),[39m
+[31m[7m  [0m [91m                                     ~~~~~~~~[0m[39m
+
+[31m    at createTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:859:12)[39m
+[31m    at reportTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:863:19)[39m
+[31m    at getOutput (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1077:36)[39m
+[31m    at Object.compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1433:41)[39m
+[31m    at Module.m._compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1617:30)[39m
+[31m    at loadTS (node:internal/modules/cjs/loader:1826:10)[39m
+[31m    at Object.require.extensions.<computed> [as .ts] (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1621:12)[39m
+[31m    at Module.load (node:internal/modules/cjs/loader:1469:32)[39m
+[31m    at Function._load (node:internal/modules/cjs/loader:1286:12)[39m
+[31m    at TracingChannel.traceSync (node:diagnostics_channel:322:14)[39m
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/validators/onboardingValidators.ts[0m:[93m53[0m:[93m38[0m - [91merror[0m[90m TS2339: [0mProperty 'required' does not exist on type 'ZodOptional<ZodObject<{ logo: ZodOptional<ZodObject<{ url: ZodString; width: ZodNumber; height: ZodNumber; }, "strip", ZodTypeAny, { url: string; width: number; height: number; }, { ...; }>>; colors: ZodOptional<...>; fonts: ZodOptional<...>; layout: ZodOptional<...>; }, "strip", ZodTypeAny, { ...; }, { ...; }>>'.
+
+[7m53[0m     brandingData: brandingDataSchema.required('Branding data is required'),
+[7m  [0m [91m                                     ~~~~~~~~[0m
+
+    at createTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1617:30)
+    at loadTS (node:internal/modules/cjs/loader:1826:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1469:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-06-24 19:28:41:2841 [31merror[39m: [31muncaughtException: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/validators/onboardingValidators.ts[0m:[93m53[0m:[93m38[0m - [91merror[0m[90m TS2339: [0mProperty 'required' does not exist on type 'ZodOptional<ZodObject<{ logo: ZodOptional<ZodObject<{ url: ZodString; width: ZodNumber; height: ZodNumber; }, "strip", ZodTypeAny, { url: string; width: number; height: number; }, { ...; }>>; colors: ZodOptional<...>; fonts: ZodOptional<...>; layout: ZodOptional<...>; }, "strip", ZodTypeAny, { ...; }, { ...; }>>'.[39m
+
+[31m[7m53[0m     brandingData: brandingDataSchema.required('Branding data is required'),[39m
+[31m[7m  [0m [91m                                     ~~~~~~~~[0m[39m
+
+[31mTSError: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/validators/onboardingValidators.ts[0m:[93m53[0m:[93m38[0m - [91merror[0m[90m TS2339: [0mProperty 'required' does not exist on type 'ZodOptional<ZodObject<{ logo: ZodOptional<ZodObject<{ url: ZodString; width: ZodNumber; height: ZodNumber; }, "strip", ZodTypeAny, { url: string; width: number; height: number; }, { ...; }>>; colors: ZodOptional<...>; fonts: ZodOptional<...>; layout: ZodOptional<...>; }, "strip", ZodTypeAny, { ...; }, { ...; }>>'.[39m
+
+[31m[7m53[0m     brandingData: brandingDataSchema.required('Branding data is required'),[39m
+[31m[7m  [0m [91m                                     ~~~~~~~~[0m[39m
+
+[31m    at createTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:859:12)[39m
+[31m    at reportTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:863:19)[39m
+[31m    at getOutput (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1077:36)[39m
+[31m    at Object.compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1433:41)[39m
+[31m    at Module.m._compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1617:30)[39m
+[31m    at loadTS (node:internal/modules/cjs/loader:1826:10)[39m
+[31m    at Object.require.extensions.<computed> [as .ts] (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1621:12)[39m
+[31m    at Module.load (node:internal/modules/cjs/loader:1469:32)[39m
+[31m    at Function._load (node:internal/modules/cjs/loader:1286:12)[39m
+[31m    at TracingChannel.traceSync (node:diagnostics_channel:322:14)[39m
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/validators/onboardingValidators.ts[0m:[93m53[0m:[93m38[0m - [91merror[0m[90m TS2339: [0mProperty 'required' does not exist on type 'ZodOptional<ZodObject<{ logo: ZodOptional<ZodObject<{ url: ZodString; width: ZodNumber; height: ZodNumber; }, "strip", ZodTypeAny, { url: string; width: number; height: number; }, { ...; }>>; colors: ZodOptional<...>; fonts: ZodOptional<...>; layout: ZodOptional<...>; }, "strip", ZodTypeAny, { ...; }, { ...; }>>'.
+
+[7m53[0m     brandingData: brandingDataSchema.required('Branding data is required'),
+[7m  [0m [91m                                     ~~~~~~~~[0m
+
+    at createTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1617:30)
+    at loadTS (node:internal/modules/cjs/loader:1826:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1469:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-06-24 19:28:53:2853 [31merror[39m: [31muncaughtException: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/validators/onboardingValidators.ts[0m:[93m53[0m:[93m38[0m - [91merror[0m[90m TS2339: [0mProperty 'required' does not exist on type 'ZodOptional<ZodObject<{ logo: ZodOptional<ZodObject<{ url: ZodString; width: ZodNumber; height: ZodNumber; }, "strip", ZodTypeAny, { url: string; width: number; height: number; }, { ...; }>>; colors: ZodOptional<...>; fonts: ZodOptional<...>; layout: ZodOptional<...>; }, "strip", ZodTypeAny, { ...; }, { ...; }>>'.[39m
+
+[31m[7m53[0m     brandingData: brandingDataSchema.required('Branding data is required'),[39m
+[31m[7m  [0m [91m                                     ~~~~~~~~[0m[39m
+
+[31mTSError: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/validators/onboardingValidators.ts[0m:[93m53[0m:[93m38[0m - [91merror[0m[90m TS2339: [0mProperty 'required' does not exist on type 'ZodOptional<ZodObject<{ logo: ZodOptional<ZodObject<{ url: ZodString; width: ZodNumber; height: ZodNumber; }, "strip", ZodTypeAny, { url: string; width: number; height: number; }, { ...; }>>; colors: ZodOptional<...>; fonts: ZodOptional<...>; layout: ZodOptional<...>; }, "strip", ZodTypeAny, { ...; }, { ...; }>>'.[39m
+
+[31m[7m53[0m     brandingData: brandingDataSchema.required('Branding data is required'),[39m
+[31m[7m  [0m [91m                                     ~~~~~~~~[0m[39m
+
+[31m    at createTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:859:12)[39m
+[31m    at reportTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:863:19)[39m
+[31m    at getOutput (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1077:36)[39m
+[31m    at Object.compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1433:41)[39m
+[31m    at Module.m._compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1617:30)[39m
+[31m    at loadTS (node:internal/modules/cjs/loader:1826:10)[39m
+[31m    at Object.require.extensions.<computed> [as .ts] (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1621:12)[39m
+[31m    at Module.load (node:internal/modules/cjs/loader:1469:32)[39m
+[31m    at Function._load (node:internal/modules/cjs/loader:1286:12)[39m
+[31m    at TracingChannel.traceSync (node:diagnostics_channel:322:14)[39m
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/validators/onboardingValidators.ts[0m:[93m53[0m:[93m38[0m - [91merror[0m[90m TS2339: [0mProperty 'required' does not exist on type 'ZodOptional<ZodObject<{ logo: ZodOptional<ZodObject<{ url: ZodString; width: ZodNumber; height: ZodNumber; }, "strip", ZodTypeAny, { url: string; width: number; height: number; }, { ...; }>>; colors: ZodOptional<...>; fonts: ZodOptional<...>; layout: ZodOptional<...>; }, "strip", ZodTypeAny, { ...; }, { ...; }>>'.
+
+[7m53[0m     brandingData: brandingDataSchema.required('Branding data is required'),
+[7m  [0m [91m                                     ~~~~~~~~[0m
+
+    at createTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1617:30)
+    at loadTS (node:internal/modules/cjs/loader:1826:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1469:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-06-24 19:34:13:3413 [31merror[39m: [31muncaughtException: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m50[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m50[0m       await auditService.log({[39m
+[31m[7m  [0m [91m                         ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m67[0m:[93m24[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m67[0m     await auditService.log({[39m
+[31m[7m  [0m [91m                       ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m112[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m112[0m         await auditService.log({[39m
+[31m[7m   [0m [91m                           ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m148[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m148[0m       await auditService.log({[39m
+[31m[7m   [0m [91m                         ~~~[0m[39m
+
+[31mTSError: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m50[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m50[0m       await auditService.log({[39m
+[31m[7m  [0m [91m                         ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m67[0m:[93m24[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m67[0m     await auditService.log({[39m
+[31m[7m  [0m [91m                       ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m112[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m112[0m         await auditService.log({[39m
+[31m[7m   [0m [91m                           ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m148[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m148[0m       await auditService.log({[39m
+[31m[7m   [0m [91m                         ~~~[0m[39m
+
+[31m    at createTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:859:12)[39m
+[31m    at reportTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:863:19)[39m
+[31m    at getOutput (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1077:36)[39m
+[31m    at Object.compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1433:41)[39m
+[31m    at Module.m._compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1617:30)[39m
+[31m    at loadTS (node:internal/modules/cjs/loader:1826:10)[39m
+[31m    at Object.require.extensions.<computed> [as .ts] (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1621:12)[39m
+[31m    at Module.load (node:internal/modules/cjs/loader:1469:32)[39m
+[31m    at Function._load (node:internal/modules/cjs/loader:1286:12)[39m
+[31m    at TracingChannel.traceSync (node:diagnostics_channel:322:14)[39m
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/middleware/auth.ts[0m:[93m50[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m50[0m       await auditService.log({
+[7m  [0m [91m                         ~~~[0m
+[96msrc/middleware/auth.ts[0m:[93m67[0m:[93m24[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m67[0m     await auditService.log({
+[7m  [0m [91m                       ~~~[0m
+[96msrc/middleware/auth.ts[0m:[93m112[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m112[0m         await auditService.log({
+[7m   [0m [91m                           ~~~[0m
+[96msrc/middleware/auth.ts[0m:[93m148[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m148[0m       await auditService.log({
+[7m   [0m [91m                         ~~~[0m
+
+    at createTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1617:30)
+    at loadTS (node:internal/modules/cjs/loader:1826:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1469:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-06-24 19:34:13:3413 [31merror[39m: [31muncaughtException: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m50[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m50[0m       await auditService.log({[39m
+[31m[7m  [0m [91m                         ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m67[0m:[93m24[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m67[0m     await auditService.log({[39m
+[31m[7m  [0m [91m                       ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m112[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m112[0m         await auditService.log({[39m
+[31m[7m   [0m [91m                           ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m148[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m148[0m       await auditService.log({[39m
+[31m[7m   [0m [91m                         ~~~[0m[39m
+
+[31mTSError: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m50[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m50[0m       await auditService.log({[39m
+[31m[7m  [0m [91m                         ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m67[0m:[93m24[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m67[0m     await auditService.log({[39m
+[31m[7m  [0m [91m                       ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m112[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m112[0m         await auditService.log({[39m
+[31m[7m   [0m [91m                           ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m148[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m148[0m       await auditService.log({[39m
+[31m[7m   [0m [91m                         ~~~[0m[39m
+
+[31m    at createTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:859:12)[39m
+[31m    at reportTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:863:19)[39m
+[31m    at getOutput (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1077:36)[39m
+[31m    at Object.compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1433:41)[39m
+[31m    at Module.m._compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1617:30)[39m
+[31m    at loadTS (node:internal/modules/cjs/loader:1826:10)[39m
+[31m    at Object.require.extensions.<computed> [as .ts] (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1621:12)[39m
+[31m    at Module.load (node:internal/modules/cjs/loader:1469:32)[39m
+[31m    at Function._load (node:internal/modules/cjs/loader:1286:12)[39m
+[31m    at TracingChannel.traceSync (node:diagnostics_channel:322:14)[39m
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/middleware/auth.ts[0m:[93m50[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m50[0m       await auditService.log({
+[7m  [0m [91m                         ~~~[0m
+[96msrc/middleware/auth.ts[0m:[93m67[0m:[93m24[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m67[0m     await auditService.log({
+[7m  [0m [91m                       ~~~[0m
+[96msrc/middleware/auth.ts[0m:[93m112[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m112[0m         await auditService.log({
+[7m   [0m [91m                           ~~~[0m
+[96msrc/middleware/auth.ts[0m:[93m148[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m148[0m       await auditService.log({
+[7m   [0m [91m                         ~~~[0m
+
+    at createTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1617:30)
+    at loadTS (node:internal/modules/cjs/loader:1826:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1469:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-06-24 19:34:14:3414 [31merror[39m: [31muncaughtException: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m50[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m50[0m       await auditService.log({[39m
+[31m[7m  [0m [91m                         ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m67[0m:[93m24[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m67[0m     await auditService.log({[39m
+[31m[7m  [0m [91m                       ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m112[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m112[0m         await auditService.log({[39m
+[31m[7m   [0m [91m                           ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m148[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m148[0m       await auditService.log({[39m
+[31m[7m   [0m [91m                         ~~~[0m[39m
+
+[31mTSError: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m50[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m50[0m       await auditService.log({[39m
+[31m[7m  [0m [91m                         ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m67[0m:[93m24[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m67[0m     await auditService.log({[39m
+[31m[7m  [0m [91m                       ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m112[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m112[0m         await auditService.log({[39m
+[31m[7m   [0m [91m                           ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m148[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m148[0m       await auditService.log({[39m
+[31m[7m   [0m [91m                         ~~~[0m[39m
+
+[31m    at createTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:859:12)[39m
+[31m    at reportTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:863:19)[39m
+[31m    at getOutput (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1077:36)[39m
+[31m    at Object.compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1433:41)[39m
+[31m    at Module.m._compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1617:30)[39m
+[31m    at loadTS (node:internal/modules/cjs/loader:1826:10)[39m
+[31m    at Object.require.extensions.<computed> [as .ts] (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1621:12)[39m
+[31m    at Module.load (node:internal/modules/cjs/loader:1469:32)[39m
+[31m    at Function._load (node:internal/modules/cjs/loader:1286:12)[39m
+[31m    at TracingChannel.traceSync (node:diagnostics_channel:322:14)[39m
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/middleware/auth.ts[0m:[93m50[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m50[0m       await auditService.log({
+[7m  [0m [91m                         ~~~[0m
+[96msrc/middleware/auth.ts[0m:[93m67[0m:[93m24[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m67[0m     await auditService.log({
+[7m  [0m [91m                       ~~~[0m
+[96msrc/middleware/auth.ts[0m:[93m112[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m112[0m         await auditService.log({
+[7m   [0m [91m                           ~~~[0m
+[96msrc/middleware/auth.ts[0m:[93m148[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m148[0m       await auditService.log({
+[7m   [0m [91m                         ~~~[0m
+
+    at createTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1617:30)
+    at loadTS (node:internal/modules/cjs/loader:1826:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1469:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-06-24 19:34:14:3414 [31merror[39m: [31muncaughtException: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m50[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m50[0m       await auditService.log({[39m
+[31m[7m  [0m [91m                         ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m67[0m:[93m24[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m67[0m     await auditService.log({[39m
+[31m[7m  [0m [91m                       ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m112[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m112[0m         await auditService.log({[39m
+[31m[7m   [0m [91m                           ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m148[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m148[0m       await auditService.log({[39m
+[31m[7m   [0m [91m                         ~~~[0m[39m
+
+[31mTSError: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m50[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m50[0m       await auditService.log({[39m
+[31m[7m  [0m [91m                         ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m67[0m:[93m24[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m67[0m     await auditService.log({[39m
+[31m[7m  [0m [91m                       ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m112[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m112[0m         await auditService.log({[39m
+[31m[7m   [0m [91m                           ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m148[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m148[0m       await auditService.log({[39m
+[31m[7m   [0m [91m                         ~~~[0m[39m
+
+[31m    at createTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:859:12)[39m
+[31m    at reportTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:863:19)[39m
+[31m    at getOutput (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1077:36)[39m
+[31m    at Object.compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1433:41)[39m
+[31m    at Module.m._compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1617:30)[39m
+[31m    at loadTS (node:internal/modules/cjs/loader:1826:10)[39m
+[31m    at Object.require.extensions.<computed> [as .ts] (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1621:12)[39m
+[31m    at Module.load (node:internal/modules/cjs/loader:1469:32)[39m
+[31m    at Function._load (node:internal/modules/cjs/loader:1286:12)[39m
+[31m    at TracingChannel.traceSync (node:diagnostics_channel:322:14)[39m
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/middleware/auth.ts[0m:[93m50[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m50[0m       await auditService.log({
+[7m  [0m [91m                         ~~~[0m
+[96msrc/middleware/auth.ts[0m:[93m67[0m:[93m24[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m67[0m     await auditService.log({
+[7m  [0m [91m                       ~~~[0m
+[96msrc/middleware/auth.ts[0m:[93m112[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m112[0m         await auditService.log({
+[7m   [0m [91m                           ~~~[0m
+[96msrc/middleware/auth.ts[0m:[93m148[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m148[0m       await auditService.log({
+[7m   [0m [91m                         ~~~[0m
+
+    at createTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1617:30)
+    at loadTS (node:internal/modules/cjs/loader:1826:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1469:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-06-24 19:34:25:3425 [31merror[39m: [31muncaughtException: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m50[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m50[0m       await auditService.log({[39m
+[31m[7m  [0m [91m                         ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m67[0m:[93m24[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m67[0m     await auditService.log({[39m
+[31m[7m  [0m [91m                       ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m112[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m112[0m         await auditService.log({[39m
+[31m[7m   [0m [91m                           ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m148[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m148[0m       await auditService.log({[39m
+[31m[7m   [0m [91m                         ~~~[0m[39m
+
+[31mTSError: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m50[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m50[0m       await auditService.log({[39m
+[31m[7m  [0m [91m                         ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m67[0m:[93m24[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m67[0m     await auditService.log({[39m
+[31m[7m  [0m [91m                       ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m112[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m112[0m         await auditService.log({[39m
+[31m[7m   [0m [91m                           ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m148[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m148[0m       await auditService.log({[39m
+[31m[7m   [0m [91m                         ~~~[0m[39m
+
+[31m    at createTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:859:12)[39m
+[31m    at reportTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:863:19)[39m
+[31m    at getOutput (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1077:36)[39m
+[31m    at Object.compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1433:41)[39m
+[31m    at Module.m._compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1617:30)[39m
+[31m    at loadTS (node:internal/modules/cjs/loader:1826:10)[39m
+[31m    at Object.require.extensions.<computed> [as .ts] (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1621:12)[39m
+[31m    at Module.load (node:internal/modules/cjs/loader:1469:32)[39m
+[31m    at Function._load (node:internal/modules/cjs/loader:1286:12)[39m
+[31m    at TracingChannel.traceSync (node:diagnostics_channel:322:14)[39m
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/middleware/auth.ts[0m:[93m50[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m50[0m       await auditService.log({
+[7m  [0m [91m                         ~~~[0m
+[96msrc/middleware/auth.ts[0m:[93m67[0m:[93m24[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m67[0m     await auditService.log({
+[7m  [0m [91m                       ~~~[0m
+[96msrc/middleware/auth.ts[0m:[93m112[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m112[0m         await auditService.log({
+[7m   [0m [91m                           ~~~[0m
+[96msrc/middleware/auth.ts[0m:[93m148[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m148[0m       await auditService.log({
+[7m   [0m [91m                         ~~~[0m
+
+    at createTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1617:30)
+    at loadTS (node:internal/modules/cjs/loader:1826:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1469:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-06-24 19:34:25:3425 [31merror[39m: [31muncaughtException: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m50[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m50[0m       await auditService.log({[39m
+[31m[7m  [0m [91m                         ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m67[0m:[93m24[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m67[0m     await auditService.log({[39m
+[31m[7m  [0m [91m                       ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m112[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m112[0m         await auditService.log({[39m
+[31m[7m   [0m [91m                           ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m148[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m148[0m       await auditService.log({[39m
+[31m[7m   [0m [91m                         ~~~[0m[39m
+
+[31mTSError: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m50[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m50[0m       await auditService.log({[39m
+[31m[7m  [0m [91m                         ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m67[0m:[93m24[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m67[0m     await auditService.log({[39m
+[31m[7m  [0m [91m                       ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m112[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m112[0m         await auditService.log({[39m
+[31m[7m   [0m [91m                           ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m148[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m148[0m       await auditService.log({[39m
+[31m[7m   [0m [91m                         ~~~[0m[39m
+
+[31m    at createTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:859:12)[39m
+[31m    at reportTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:863:19)[39m
+[31m    at getOutput (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1077:36)[39m
+[31m    at Object.compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1433:41)[39m
+[31m    at Module.m._compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1617:30)[39m
+[31m    at loadTS (node:internal/modules/cjs/loader:1826:10)[39m
+[31m    at Object.require.extensions.<computed> [as .ts] (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1621:12)[39m
+[31m    at Module.load (node:internal/modules/cjs/loader:1469:32)[39m
+[31m    at Function._load (node:internal/modules/cjs/loader:1286:12)[39m
+[31m    at TracingChannel.traceSync (node:diagnostics_channel:322:14)[39m
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/middleware/auth.ts[0m:[93m50[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m50[0m       await auditService.log({
+[7m  [0m [91m                         ~~~[0m
+[96msrc/middleware/auth.ts[0m:[93m67[0m:[93m24[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m67[0m     await auditService.log({
+[7m  [0m [91m                       ~~~[0m
+[96msrc/middleware/auth.ts[0m:[93m112[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m112[0m         await auditService.log({
+[7m   [0m [91m                           ~~~[0m
+[96msrc/middleware/auth.ts[0m:[93m148[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m148[0m       await auditService.log({
+[7m   [0m [91m                         ~~~[0m
+
+    at createTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1617:30)
+    at loadTS (node:internal/modules/cjs/loader:1826:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1469:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-06-24 19:35:28:3528 [31merror[39m: [31muncaughtException: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m50[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m50[0m       await auditService.log({[39m
+[31m[7m  [0m [91m                         ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m67[0m:[93m24[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m67[0m     await auditService.log({[39m
+[31m[7m  [0m [91m                       ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m112[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m112[0m         await auditService.log({[39m
+[31m[7m   [0m [91m                           ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m148[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m148[0m       await auditService.log({[39m
+[31m[7m   [0m [91m                         ~~~[0m[39m
+
+[31mTSError: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m50[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m50[0m       await auditService.log({[39m
+[31m[7m  [0m [91m                         ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m67[0m:[93m24[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m67[0m     await auditService.log({[39m
+[31m[7m  [0m [91m                       ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m112[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m112[0m         await auditService.log({[39m
+[31m[7m   [0m [91m                           ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m148[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m148[0m       await auditService.log({[39m
+[31m[7m   [0m [91m                         ~~~[0m[39m
+
+[31m    at createTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:859:12)[39m
+[31m    at reportTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:863:19)[39m
+[31m    at getOutput (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1077:36)[39m
+[31m    at Object.compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1433:41)[39m
+[31m    at Module.m._compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1617:30)[39m
+[31m    at loadTS (node:internal/modules/cjs/loader:1826:10)[39m
+[31m    at Object.require.extensions.<computed> [as .ts] (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1621:12)[39m
+[31m    at Module.load (node:internal/modules/cjs/loader:1469:32)[39m
+[31m    at Function._load (node:internal/modules/cjs/loader:1286:12)[39m
+[31m    at TracingChannel.traceSync (node:diagnostics_channel:322:14)[39m
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/middleware/auth.ts[0m:[93m50[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m50[0m       await auditService.log({
+[7m  [0m [91m                         ~~~[0m
+[96msrc/middleware/auth.ts[0m:[93m67[0m:[93m24[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m67[0m     await auditService.log({
+[7m  [0m [91m                       ~~~[0m
+[96msrc/middleware/auth.ts[0m:[93m112[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m112[0m         await auditService.log({
+[7m   [0m [91m                           ~~~[0m
+[96msrc/middleware/auth.ts[0m:[93m148[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m148[0m       await auditService.log({
+[7m   [0m [91m                         ~~~[0m
+
+    at createTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1617:30)
+    at loadTS (node:internal/modules/cjs/loader:1826:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1469:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-06-24 19:35:28:3528 [31merror[39m: [31muncaughtException: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m50[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m50[0m       await auditService.log({[39m
+[31m[7m  [0m [91m                         ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m67[0m:[93m24[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m67[0m     await auditService.log({[39m
+[31m[7m  [0m [91m                       ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m112[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m112[0m         await auditService.log({[39m
+[31m[7m   [0m [91m                           ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m148[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m148[0m       await auditService.log({[39m
+[31m[7m   [0m [91m                         ~~~[0m[39m
+
+[31mTSError: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m50[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m50[0m       await auditService.log({[39m
+[31m[7m  [0m [91m                         ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m67[0m:[93m24[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m67[0m     await auditService.log({[39m
+[31m[7m  [0m [91m                       ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m112[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m112[0m         await auditService.log({[39m
+[31m[7m   [0m [91m                           ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m148[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m148[0m       await auditService.log({[39m
+[31m[7m   [0m [91m                         ~~~[0m[39m
+
+[31m    at createTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:859:12)[39m
+[31m    at reportTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:863:19)[39m
+[31m    at getOutput (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1077:36)[39m
+[31m    at Object.compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1433:41)[39m
+[31m    at Module.m._compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1617:30)[39m
+[31m    at loadTS (node:internal/modules/cjs/loader:1826:10)[39m
+[31m    at Object.require.extensions.<computed> [as .ts] (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1621:12)[39m
+[31m    at Module.load (node:internal/modules/cjs/loader:1469:32)[39m
+[31m    at Function._load (node:internal/modules/cjs/loader:1286:12)[39m
+[31m    at TracingChannel.traceSync (node:diagnostics_channel:322:14)[39m
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/middleware/auth.ts[0m:[93m50[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m50[0m       await auditService.log({
+[7m  [0m [91m                         ~~~[0m
+[96msrc/middleware/auth.ts[0m:[93m67[0m:[93m24[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m67[0m     await auditService.log({
+[7m  [0m [91m                       ~~~[0m
+[96msrc/middleware/auth.ts[0m:[93m112[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m112[0m         await auditService.log({
+[7m   [0m [91m                           ~~~[0m
+[96msrc/middleware/auth.ts[0m:[93m148[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m148[0m       await auditService.log({
+[7m   [0m [91m                         ~~~[0m
+
+    at createTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1617:30)
+    at loadTS (node:internal/modules/cjs/loader:1826:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1469:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-06-24 19:35:30:3530 [31merror[39m: [31muncaughtException: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m50[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m50[0m       await auditService.log({[39m
+[31m[7m  [0m [91m                         ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m67[0m:[93m24[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m67[0m     await auditService.log({[39m
+[31m[7m  [0m [91m                       ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m112[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m112[0m         await auditService.log({[39m
+[31m[7m   [0m [91m                           ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m148[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m148[0m       await auditService.log({[39m
+[31m[7m   [0m [91m                         ~~~[0m[39m
+
+[31mTSError: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m50[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m50[0m       await auditService.log({[39m
+[31m[7m  [0m [91m                         ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m67[0m:[93m24[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m67[0m     await auditService.log({[39m
+[31m[7m  [0m [91m                       ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m112[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m112[0m         await auditService.log({[39m
+[31m[7m   [0m [91m                           ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m148[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m148[0m       await auditService.log({[39m
+[31m[7m   [0m [91m                         ~~~[0m[39m
+
+[31m    at createTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:859:12)[39m
+[31m    at reportTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:863:19)[39m
+[31m    at getOutput (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1077:36)[39m
+[31m    at Object.compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1433:41)[39m
+[31m    at Module.m._compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1617:30)[39m
+[31m    at loadTS (node:internal/modules/cjs/loader:1826:10)[39m
+[31m    at Object.require.extensions.<computed> [as .ts] (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1621:12)[39m
+[31m    at Module.load (node:internal/modules/cjs/loader:1469:32)[39m
+[31m    at Function._load (node:internal/modules/cjs/loader:1286:12)[39m
+[31m    at TracingChannel.traceSync (node:diagnostics_channel:322:14)[39m
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/middleware/auth.ts[0m:[93m50[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m50[0m       await auditService.log({
+[7m  [0m [91m                         ~~~[0m
+[96msrc/middleware/auth.ts[0m:[93m67[0m:[93m24[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m67[0m     await auditService.log({
+[7m  [0m [91m                       ~~~[0m
+[96msrc/middleware/auth.ts[0m:[93m112[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m112[0m         await auditService.log({
+[7m   [0m [91m                           ~~~[0m
+[96msrc/middleware/auth.ts[0m:[93m148[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m148[0m       await auditService.log({
+[7m   [0m [91m                         ~~~[0m
+
+    at createTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1617:30)
+    at loadTS (node:internal/modules/cjs/loader:1826:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1469:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-06-24 19:35:30:3530 [31merror[39m: [31muncaughtException: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m50[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m50[0m       await auditService.log({[39m
+[31m[7m  [0m [91m                         ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m67[0m:[93m24[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m67[0m     await auditService.log({[39m
+[31m[7m  [0m [91m                       ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m112[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m112[0m         await auditService.log({[39m
+[31m[7m   [0m [91m                           ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m148[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m148[0m       await auditService.log({[39m
+[31m[7m   [0m [91m                         ~~~[0m[39m
+
+[31mTSError: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m50[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m50[0m       await auditService.log({[39m
+[31m[7m  [0m [91m                         ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m67[0m:[93m24[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m67[0m     await auditService.log({[39m
+[31m[7m  [0m [91m                       ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m112[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m112[0m         await auditService.log({[39m
+[31m[7m   [0m [91m                           ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m148[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m148[0m       await auditService.log({[39m
+[31m[7m   [0m [91m                         ~~~[0m[39m
+
+[31m    at createTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:859:12)[39m
+[31m    at reportTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:863:19)[39m
+[31m    at getOutput (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1077:36)[39m
+[31m    at Object.compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1433:41)[39m
+[31m    at Module.m._compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1617:30)[39m
+[31m    at loadTS (node:internal/modules/cjs/loader:1826:10)[39m
+[31m    at Object.require.extensions.<computed> [as .ts] (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1621:12)[39m
+[31m    at Module.load (node:internal/modules/cjs/loader:1469:32)[39m
+[31m    at Function._load (node:internal/modules/cjs/loader:1286:12)[39m
+[31m    at TracingChannel.traceSync (node:diagnostics_channel:322:14)[39m
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/middleware/auth.ts[0m:[93m50[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m50[0m       await auditService.log({
+[7m  [0m [91m                         ~~~[0m
+[96msrc/middleware/auth.ts[0m:[93m67[0m:[93m24[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m67[0m     await auditService.log({
+[7m  [0m [91m                       ~~~[0m
+[96msrc/middleware/auth.ts[0m:[93m112[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m112[0m         await auditService.log({
+[7m   [0m [91m                           ~~~[0m
+[96msrc/middleware/auth.ts[0m:[93m148[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m148[0m       await auditService.log({
+[7m   [0m [91m                         ~~~[0m
+
+    at createTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1617:30)
+    at loadTS (node:internal/modules/cjs/loader:1826:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1469:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-06-24 19:35:39:3539 [31merror[39m: [31muncaughtException: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m50[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m50[0m       await auditService.log({[39m
+[31m[7m  [0m [91m                         ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m67[0m:[93m24[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m67[0m     await auditService.log({[39m
+[31m[7m  [0m [91m                       ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m112[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m112[0m         await auditService.log({[39m
+[31m[7m   [0m [91m                           ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m148[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m148[0m       await auditService.log({[39m
+[31m[7m   [0m [91m                         ~~~[0m[39m
+
+[31mTSError: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m50[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m50[0m       await auditService.log({[39m
+[31m[7m  [0m [91m                         ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m67[0m:[93m24[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m67[0m     await auditService.log({[39m
+[31m[7m  [0m [91m                       ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m112[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m112[0m         await auditService.log({[39m
+[31m[7m   [0m [91m                           ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m148[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m148[0m       await auditService.log({[39m
+[31m[7m   [0m [91m                         ~~~[0m[39m
+
+[31m    at createTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:859:12)[39m
+[31m    at reportTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:863:19)[39m
+[31m    at getOutput (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1077:36)[39m
+[31m    at Object.compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1433:41)[39m
+[31m    at Module.m._compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1617:30)[39m
+[31m    at loadTS (node:internal/modules/cjs/loader:1826:10)[39m
+[31m    at Object.require.extensions.<computed> [as .ts] (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1621:12)[39m
+[31m    at Module.load (node:internal/modules/cjs/loader:1469:32)[39m
+[31m    at Function._load (node:internal/modules/cjs/loader:1286:12)[39m
+[31m    at TracingChannel.traceSync (node:diagnostics_channel:322:14)[39m
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/middleware/auth.ts[0m:[93m50[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m50[0m       await auditService.log({
+[7m  [0m [91m                         ~~~[0m
+[96msrc/middleware/auth.ts[0m:[93m67[0m:[93m24[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m67[0m     await auditService.log({
+[7m  [0m [91m                       ~~~[0m
+[96msrc/middleware/auth.ts[0m:[93m112[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m112[0m         await auditService.log({
+[7m   [0m [91m                           ~~~[0m
+[96msrc/middleware/auth.ts[0m:[93m148[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m148[0m       await auditService.log({
+[7m   [0m [91m                         ~~~[0m
+
+    at createTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1617:30)
+    at loadTS (node:internal/modules/cjs/loader:1826:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1469:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-06-24 19:35:42:3542 [31merror[39m: [31muncaughtException: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m50[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m50[0m       await auditService.log({[39m
+[31m[7m  [0m [91m                         ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m67[0m:[93m24[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m67[0m     await auditService.log({[39m
+[31m[7m  [0m [91m                       ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m112[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m112[0m         await auditService.log({[39m
+[31m[7m   [0m [91m                           ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m148[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m148[0m       await auditService.log({[39m
+[31m[7m   [0m [91m                         ~~~[0m[39m
+
+[31mTSError: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m50[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m50[0m       await auditService.log({[39m
+[31m[7m  [0m [91m                         ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m67[0m:[93m24[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m67[0m     await auditService.log({[39m
+[31m[7m  [0m [91m                       ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m112[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m112[0m         await auditService.log({[39m
+[31m[7m   [0m [91m                           ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m148[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m148[0m       await auditService.log({[39m
+[31m[7m   [0m [91m                         ~~~[0m[39m
+
+[31m    at createTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:859:12)[39m
+[31m    at reportTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:863:19)[39m
+[31m    at getOutput (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1077:36)[39m
+[31m    at Object.compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1433:41)[39m
+[31m    at Module.m._compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1617:30)[39m
+[31m    at loadTS (node:internal/modules/cjs/loader:1826:10)[39m
+[31m    at Object.require.extensions.<computed> [as .ts] (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1621:12)[39m
+[31m    at Module.load (node:internal/modules/cjs/loader:1469:32)[39m
+[31m    at Function._load (node:internal/modules/cjs/loader:1286:12)[39m
+[31m    at TracingChannel.traceSync (node:diagnostics_channel:322:14)[39m
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/middleware/auth.ts[0m:[93m50[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m50[0m       await auditService.log({
+[7m  [0m [91m                         ~~~[0m
+[96msrc/middleware/auth.ts[0m:[93m67[0m:[93m24[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m67[0m     await auditService.log({
+[7m  [0m [91m                       ~~~[0m
+[96msrc/middleware/auth.ts[0m:[93m112[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m112[0m         await auditService.log({
+[7m   [0m [91m                           ~~~[0m
+[96msrc/middleware/auth.ts[0m:[93m148[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m148[0m       await auditService.log({
+[7m   [0m [91m                         ~~~[0m
+
+    at createTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1617:30)
+    at loadTS (node:internal/modules/cjs/loader:1826:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1469:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-06-24 19:35:42:3542 [31merror[39m: [31muncaughtException: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m50[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m50[0m       await auditService.log({[39m
+[31m[7m  [0m [91m                         ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m67[0m:[93m24[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m67[0m     await auditService.log({[39m
+[31m[7m  [0m [91m                       ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m112[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m112[0m         await auditService.log({[39m
+[31m[7m   [0m [91m                           ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m148[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m148[0m       await auditService.log({[39m
+[31m[7m   [0m [91m                         ~~~[0m[39m
+
+[31mTSError: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m50[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m50[0m       await auditService.log({[39m
+[31m[7m  [0m [91m                         ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m67[0m:[93m24[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m67[0m     await auditService.log({[39m
+[31m[7m  [0m [91m                       ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m112[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m112[0m         await auditService.log({[39m
+[31m[7m   [0m [91m                           ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m148[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m148[0m       await auditService.log({[39m
+[31m[7m   [0m [91m                         ~~~[0m[39m
+
+[31m    at createTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:859:12)[39m
+[31m    at reportTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:863:19)[39m
+[31m    at getOutput (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1077:36)[39m
+[31m    at Object.compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1433:41)[39m
+[31m    at Module.m._compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1617:30)[39m
+[31m    at loadTS (node:internal/modules/cjs/loader:1826:10)[39m
+[31m    at Object.require.extensions.<computed> [as .ts] (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1621:12)[39m
+[31m    at Module.load (node:internal/modules/cjs/loader:1469:32)[39m
+[31m    at Function._load (node:internal/modules/cjs/loader:1286:12)[39m
+[31m    at TracingChannel.traceSync (node:diagnostics_channel:322:14)[39m
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/middleware/auth.ts[0m:[93m50[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m50[0m       await auditService.log({
+[7m  [0m [91m                         ~~~[0m
+[96msrc/middleware/auth.ts[0m:[93m67[0m:[93m24[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m67[0m     await auditService.log({
+[7m  [0m [91m                       ~~~[0m
+[96msrc/middleware/auth.ts[0m:[93m112[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m112[0m         await auditService.log({
+[7m   [0m [91m                           ~~~[0m
+[96msrc/middleware/auth.ts[0m:[93m148[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m148[0m       await auditService.log({
+[7m   [0m [91m                         ~~~[0m
+
+    at createTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1617:30)
+    at loadTS (node:internal/modules/cjs/loader:1826:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1469:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-06-24 19:35:44:3544 [31merror[39m: [31muncaughtException: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m50[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m50[0m       await auditService.log({[39m
+[31m[7m  [0m [91m                         ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m67[0m:[93m24[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m67[0m     await auditService.log({[39m
+[31m[7m  [0m [91m                       ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m112[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m112[0m         await auditService.log({[39m
+[31m[7m   [0m [91m                           ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m148[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m148[0m       await auditService.log({[39m
+[31m[7m   [0m [91m                         ~~~[0m[39m
+
+[31mTSError: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m50[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m50[0m       await auditService.log({[39m
+[31m[7m  [0m [91m                         ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m67[0m:[93m24[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m67[0m     await auditService.log({[39m
+[31m[7m  [0m [91m                       ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m112[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m112[0m         await auditService.log({[39m
+[31m[7m   [0m [91m                           ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m148[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m148[0m       await auditService.log({[39m
+[31m[7m   [0m [91m                         ~~~[0m[39m
+
+[31m    at createTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:859:12)[39m
+[31m    at reportTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:863:19)[39m
+[31m    at getOutput (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1077:36)[39m
+[31m    at Object.compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1433:41)[39m
+[31m    at Module.m._compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1617:30)[39m
+[31m    at loadTS (node:internal/modules/cjs/loader:1826:10)[39m
+[31m    at Object.require.extensions.<computed> [as .ts] (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1621:12)[39m
+[31m    at Module.load (node:internal/modules/cjs/loader:1469:32)[39m
+[31m    at Function._load (node:internal/modules/cjs/loader:1286:12)[39m
+[31m    at TracingChannel.traceSync (node:diagnostics_channel:322:14)[39m
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/middleware/auth.ts[0m:[93m50[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m50[0m       await auditService.log({
+[7m  [0m [91m                         ~~~[0m
+[96msrc/middleware/auth.ts[0m:[93m67[0m:[93m24[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m67[0m     await auditService.log({
+[7m  [0m [91m                       ~~~[0m
+[96msrc/middleware/auth.ts[0m:[93m112[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m112[0m         await auditService.log({
+[7m   [0m [91m                           ~~~[0m
+[96msrc/middleware/auth.ts[0m:[93m148[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m148[0m       await auditService.log({
+[7m   [0m [91m                         ~~~[0m
+
+    at createTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1617:30)
+    at loadTS (node:internal/modules/cjs/loader:1826:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1469:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-06-24 19:35:44:3544 [31merror[39m: [31muncaughtException: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m50[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m50[0m       await auditService.log({[39m
+[31m[7m  [0m [91m                         ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m67[0m:[93m24[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m67[0m     await auditService.log({[39m
+[31m[7m  [0m [91m                       ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m112[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m112[0m         await auditService.log({[39m
+[31m[7m   [0m [91m                           ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m148[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m148[0m       await auditService.log({[39m
+[31m[7m   [0m [91m                         ~~~[0m[39m
+
+[31mTSError: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m50[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m50[0m       await auditService.log({[39m
+[31m[7m  [0m [91m                         ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m67[0m:[93m24[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m67[0m     await auditService.log({[39m
+[31m[7m  [0m [91m                       ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m112[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m112[0m         await auditService.log({[39m
+[31m[7m   [0m [91m                           ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m148[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m148[0m       await auditService.log({[39m
+[31m[7m   [0m [91m                         ~~~[0m[39m
+
+[31m    at createTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:859:12)[39m
+[31m    at reportTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:863:19)[39m
+[31m    at getOutput (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1077:36)[39m
+[31m    at Object.compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1433:41)[39m
+[31m    at Module.m._compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1617:30)[39m
+[31m    at loadTS (node:internal/modules/cjs/loader:1826:10)[39m
+[31m    at Object.require.extensions.<computed> [as .ts] (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1621:12)[39m
+[31m    at Module.load (node:internal/modules/cjs/loader:1469:32)[39m
+[31m    at Function._load (node:internal/modules/cjs/loader:1286:12)[39m
+[31m    at TracingChannel.traceSync (node:diagnostics_channel:322:14)[39m
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/middleware/auth.ts[0m:[93m50[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m50[0m       await auditService.log({
+[7m  [0m [91m                         ~~~[0m
+[96msrc/middleware/auth.ts[0m:[93m67[0m:[93m24[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m67[0m     await auditService.log({
+[7m  [0m [91m                       ~~~[0m
+[96msrc/middleware/auth.ts[0m:[93m112[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m112[0m         await auditService.log({
+[7m   [0m [91m                           ~~~[0m
+[96msrc/middleware/auth.ts[0m:[93m148[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m148[0m       await auditService.log({
+[7m   [0m [91m                         ~~~[0m
+
+    at createTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1617:30)
+    at loadTS (node:internal/modules/cjs/loader:1826:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1469:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-06-24 19:35:55:3555 [31merror[39m: [31muncaughtException: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m50[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m50[0m       await auditService.log({[39m
+[31m[7m  [0m [91m                         ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m67[0m:[93m24[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m67[0m     await auditService.log({[39m
+[31m[7m  [0m [91m                       ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m112[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m112[0m         await auditService.log({[39m
+[31m[7m   [0m [91m                           ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m148[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m148[0m       await auditService.log({[39m
+[31m[7m   [0m [91m                         ~~~[0m[39m
+
+[31mTSError: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m50[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m50[0m       await auditService.log({[39m
+[31m[7m  [0m [91m                         ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m67[0m:[93m24[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m67[0m     await auditService.log({[39m
+[31m[7m  [0m [91m                       ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m112[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m112[0m         await auditService.log({[39m
+[31m[7m   [0m [91m                           ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m148[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m148[0m       await auditService.log({[39m
+[31m[7m   [0m [91m                         ~~~[0m[39m
+
+[31m    at createTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:859:12)[39m
+[31m    at reportTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:863:19)[39m
+[31m    at getOutput (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1077:36)[39m
+[31m    at Object.compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1433:41)[39m
+[31m    at Module.m._compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1617:30)[39m
+[31m    at loadTS (node:internal/modules/cjs/loader:1826:10)[39m
+[31m    at Object.require.extensions.<computed> [as .ts] (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1621:12)[39m
+[31m    at Module.load (node:internal/modules/cjs/loader:1469:32)[39m
+[31m    at Function._load (node:internal/modules/cjs/loader:1286:12)[39m
+[31m    at TracingChannel.traceSync (node:diagnostics_channel:322:14)[39m
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/middleware/auth.ts[0m:[93m50[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m50[0m       await auditService.log({
+[7m  [0m [91m                         ~~~[0m
+[96msrc/middleware/auth.ts[0m:[93m67[0m:[93m24[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m67[0m     await auditService.log({
+[7m  [0m [91m                       ~~~[0m
+[96msrc/middleware/auth.ts[0m:[93m112[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m112[0m         await auditService.log({
+[7m   [0m [91m                           ~~~[0m
+[96msrc/middleware/auth.ts[0m:[93m148[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m148[0m       await auditService.log({
+[7m   [0m [91m                         ~~~[0m
+
+    at createTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1617:30)
+    at loadTS (node:internal/modules/cjs/loader:1826:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1469:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-06-24 19:35:59:3559 [31merror[39m: [31muncaughtException: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m50[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m50[0m       await auditService.log({[39m
+[31m[7m  [0m [91m                         ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m67[0m:[93m24[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m67[0m     await auditService.log({[39m
+[31m[7m  [0m [91m                       ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m112[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m112[0m         await auditService.log({[39m
+[31m[7m   [0m [91m                           ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m148[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m148[0m       await auditService.log({[39m
+[31m[7m   [0m [91m                         ~~~[0m[39m
+
+[31mTSError: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m50[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m50[0m       await auditService.log({[39m
+[31m[7m  [0m [91m                         ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m67[0m:[93m24[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m67[0m     await auditService.log({[39m
+[31m[7m  [0m [91m                       ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m112[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m112[0m         await auditService.log({[39m
+[31m[7m   [0m [91m                           ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m148[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m148[0m       await auditService.log({[39m
+[31m[7m   [0m [91m                         ~~~[0m[39m
+
+[31m    at createTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:859:12)[39m
+[31m    at reportTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:863:19)[39m
+[31m    at getOutput (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1077:36)[39m
+[31m    at Object.compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1433:41)[39m
+[31m    at Module.m._compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1617:30)[39m
+[31m    at loadTS (node:internal/modules/cjs/loader:1826:10)[39m
+[31m    at Object.require.extensions.<computed> [as .ts] (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1621:12)[39m
+[31m    at Module.load (node:internal/modules/cjs/loader:1469:32)[39m
+[31m    at Function._load (node:internal/modules/cjs/loader:1286:12)[39m
+[31m    at TracingChannel.traceSync (node:diagnostics_channel:322:14)[39m
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/middleware/auth.ts[0m:[93m50[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m50[0m       await auditService.log({
+[7m  [0m [91m                         ~~~[0m
+[96msrc/middleware/auth.ts[0m:[93m67[0m:[93m24[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m67[0m     await auditService.log({
+[7m  [0m [91m                       ~~~[0m
+[96msrc/middleware/auth.ts[0m:[93m112[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m112[0m         await auditService.log({
+[7m   [0m [91m                           ~~~[0m
+[96msrc/middleware/auth.ts[0m:[93m148[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m148[0m       await auditService.log({
+[7m   [0m [91m                         ~~~[0m
+
+    at createTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1617:30)
+    at loadTS (node:internal/modules/cjs/loader:1826:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1469:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-06-24 19:37:40:3740 [31merror[39m: [31muncaughtException: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m50[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m50[0m       await auditService.log({[39m
+[31m[7m  [0m [91m                         ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m67[0m:[93m24[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m67[0m     await auditService.log({[39m
+[31m[7m  [0m [91m                       ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m112[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m112[0m         await auditService.log({[39m
+[31m[7m   [0m [91m                           ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m148[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m148[0m       await auditService.log({[39m
+[31m[7m   [0m [91m                         ~~~[0m[39m
+
+[31mTSError: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m50[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m50[0m       await auditService.log({[39m
+[31m[7m  [0m [91m                         ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m67[0m:[93m24[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m67[0m     await auditService.log({[39m
+[31m[7m  [0m [91m                       ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m112[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m112[0m         await auditService.log({[39m
+[31m[7m   [0m [91m                           ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m148[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m148[0m       await auditService.log({[39m
+[31m[7m   [0m [91m                         ~~~[0m[39m
+
+[31m    at createTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:859:12)[39m
+[31m    at reportTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:863:19)[39m
+[31m    at getOutput (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1077:36)[39m
+[31m    at Object.compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1433:41)[39m
+[31m    at Module.m._compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1617:30)[39m
+[31m    at loadTS (node:internal/modules/cjs/loader:1826:10)[39m
+[31m    at Object.require.extensions.<computed> [as .ts] (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1621:12)[39m
+[31m    at Module.load (node:internal/modules/cjs/loader:1469:32)[39m
+[31m    at Function._load (node:internal/modules/cjs/loader:1286:12)[39m
+[31m    at TracingChannel.traceSync (node:diagnostics_channel:322:14)[39m
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/middleware/auth.ts[0m:[93m50[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m50[0m       await auditService.log({
+[7m  [0m [91m                         ~~~[0m
+[96msrc/middleware/auth.ts[0m:[93m67[0m:[93m24[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m67[0m     await auditService.log({
+[7m  [0m [91m                       ~~~[0m
+[96msrc/middleware/auth.ts[0m:[93m112[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m112[0m         await auditService.log({
+[7m   [0m [91m                           ~~~[0m
+[96msrc/middleware/auth.ts[0m:[93m148[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m148[0m       await auditService.log({
+[7m   [0m [91m                         ~~~[0m
+
+    at createTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1617:30)
+    at loadTS (node:internal/modules/cjs/loader:1826:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1469:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-06-24 19:37:58:3758 [31merror[39m: [31muncaughtException: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m50[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m50[0m       await auditService.log({[39m
+[31m[7m  [0m [91m                         ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m67[0m:[93m24[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m67[0m     await auditService.log({[39m
+[31m[7m  [0m [91m                       ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m112[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m112[0m         await auditService.log({[39m
+[31m[7m   [0m [91m                           ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m148[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m148[0m       await auditService.log({[39m
+[31m[7m   [0m [91m                         ~~~[0m[39m
+
+[31mTSError: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m50[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m50[0m       await auditService.log({[39m
+[31m[7m  [0m [91m                         ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m67[0m:[93m24[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m67[0m     await auditService.log({[39m
+[31m[7m  [0m [91m                       ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m112[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m112[0m         await auditService.log({[39m
+[31m[7m   [0m [91m                           ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m148[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m148[0m       await auditService.log({[39m
+[31m[7m   [0m [91m                         ~~~[0m[39m
+
+[31m    at createTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:859:12)[39m
+[31m    at reportTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:863:19)[39m
+[31m    at getOutput (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1077:36)[39m
+[31m    at Object.compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1433:41)[39m
+[31m    at Module.m._compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1617:30)[39m
+[31m    at loadTS (node:internal/modules/cjs/loader:1826:10)[39m
+[31m    at Object.require.extensions.<computed> [as .ts] (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1621:12)[39m
+[31m    at Module.load (node:internal/modules/cjs/loader:1469:32)[39m
+[31m    at Function._load (node:internal/modules/cjs/loader:1286:12)[39m
+[31m    at TracingChannel.traceSync (node:diagnostics_channel:322:14)[39m
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/middleware/auth.ts[0m:[93m50[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m50[0m       await auditService.log({
+[7m  [0m [91m                         ~~~[0m
+[96msrc/middleware/auth.ts[0m:[93m67[0m:[93m24[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m67[0m     await auditService.log({
+[7m  [0m [91m                       ~~~[0m
+[96msrc/middleware/auth.ts[0m:[93m112[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m112[0m         await auditService.log({
+[7m   [0m [91m                           ~~~[0m
+[96msrc/middleware/auth.ts[0m:[93m148[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m148[0m       await auditService.log({
+[7m   [0m [91m                         ~~~[0m
+
+    at createTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1617:30)
+    at loadTS (node:internal/modules/cjs/loader:1826:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1469:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-06-24 19:39:20:3920 [31merror[39m: [31muncaughtException: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m50[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m50[0m       await auditService.log({[39m
+[31m[7m  [0m [91m                         ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m67[0m:[93m24[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m67[0m     await auditService.log({[39m
+[31m[7m  [0m [91m                       ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m112[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m112[0m         await auditService.log({[39m
+[31m[7m   [0m [91m                           ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m148[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m148[0m       await auditService.log({[39m
+[31m[7m   [0m [91m                         ~~~[0m[39m
+
+[31mTSError: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m50[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m50[0m       await auditService.log({[39m
+[31m[7m  [0m [91m                         ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m67[0m:[93m24[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m67[0m     await auditService.log({[39m
+[31m[7m  [0m [91m                       ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m112[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m112[0m         await auditService.log({[39m
+[31m[7m   [0m [91m                           ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m148[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m148[0m       await auditService.log({[39m
+[31m[7m   [0m [91m                         ~~~[0m[39m
+
+[31m    at createTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:859:12)[39m
+[31m    at reportTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:863:19)[39m
+[31m    at getOutput (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1077:36)[39m
+[31m    at Object.compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1433:41)[39m
+[31m    at Module.m._compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1617:30)[39m
+[31m    at loadTS (node:internal/modules/cjs/loader:1826:10)[39m
+[31m    at Object.require.extensions.<computed> [as .ts] (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1621:12)[39m
+[31m    at Module.load (node:internal/modules/cjs/loader:1469:32)[39m
+[31m    at Function._load (node:internal/modules/cjs/loader:1286:12)[39m
+[31m    at TracingChannel.traceSync (node:diagnostics_channel:322:14)[39m
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/middleware/auth.ts[0m:[93m50[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m50[0m       await auditService.log({
+[7m  [0m [91m                         ~~~[0m
+[96msrc/middleware/auth.ts[0m:[93m67[0m:[93m24[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m67[0m     await auditService.log({
+[7m  [0m [91m                       ~~~[0m
+[96msrc/middleware/auth.ts[0m:[93m112[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m112[0m         await auditService.log({
+[7m   [0m [91m                           ~~~[0m
+[96msrc/middleware/auth.ts[0m:[93m148[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m148[0m       await auditService.log({
+[7m   [0m [91m                         ~~~[0m
+
+    at createTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1617:30)
+    at loadTS (node:internal/modules/cjs/loader:1826:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1469:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-06-24 19:39:44:3944 [31merror[39m: [31muncaughtException: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m50[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m50[0m       await auditService.log({[39m
+[31m[7m  [0m [91m                         ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m67[0m:[93m24[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m67[0m     await auditService.log({[39m
+[31m[7m  [0m [91m                       ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m112[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m112[0m         await auditService.log({[39m
+[31m[7m   [0m [91m                           ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m148[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m148[0m       await auditService.log({[39m
+[31m[7m   [0m [91m                         ~~~[0m[39m
+
+[31mTSError: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m50[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m50[0m       await auditService.log({[39m
+[31m[7m  [0m [91m                         ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m67[0m:[93m24[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m67[0m     await auditService.log({[39m
+[31m[7m  [0m [91m                       ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m112[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m112[0m         await auditService.log({[39m
+[31m[7m   [0m [91m                           ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m148[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m148[0m       await auditService.log({[39m
+[31m[7m   [0m [91m                         ~~~[0m[39m
+
+[31m    at createTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:859:12)[39m
+[31m    at reportTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:863:19)[39m
+[31m    at getOutput (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1077:36)[39m
+[31m    at Object.compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1433:41)[39m
+[31m    at Module.m._compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1617:30)[39m
+[31m    at loadTS (node:internal/modules/cjs/loader:1826:10)[39m
+[31m    at Object.require.extensions.<computed> [as .ts] (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1621:12)[39m
+[31m    at Module.load (node:internal/modules/cjs/loader:1469:32)[39m
+[31m    at Function._load (node:internal/modules/cjs/loader:1286:12)[39m
+[31m    at TracingChannel.traceSync (node:diagnostics_channel:322:14)[39m
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/middleware/auth.ts[0m:[93m50[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m50[0m       await auditService.log({
+[7m  [0m [91m                         ~~~[0m
+[96msrc/middleware/auth.ts[0m:[93m67[0m:[93m24[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m67[0m     await auditService.log({
+[7m  [0m [91m                       ~~~[0m
+[96msrc/middleware/auth.ts[0m:[93m112[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m112[0m         await auditService.log({
+[7m   [0m [91m                           ~~~[0m
+[96msrc/middleware/auth.ts[0m:[93m148[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m148[0m       await auditService.log({
+[7m   [0m [91m                         ~~~[0m
+
+    at createTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1617:30)
+    at loadTS (node:internal/modules/cjs/loader:1826:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1469:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-06-24 19:40:46:4046 [31merror[39m: [31muncaughtException: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m50[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m50[0m       await auditService.log({[39m
+[31m[7m  [0m [91m                         ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m67[0m:[93m24[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m67[0m     await auditService.log({[39m
+[31m[7m  [0m [91m                       ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m112[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m112[0m         await auditService.log({[39m
+[31m[7m   [0m [91m                           ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m148[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m148[0m       await auditService.log({[39m
+[31m[7m   [0m [91m                         ~~~[0m[39m
+
+[31mTSError: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m50[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m50[0m       await auditService.log({[39m
+[31m[7m  [0m [91m                         ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m67[0m:[93m24[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m67[0m     await auditService.log({[39m
+[31m[7m  [0m [91m                       ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m112[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m112[0m         await auditService.log({[39m
+[31m[7m   [0m [91m                           ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m148[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m148[0m       await auditService.log({[39m
+[31m[7m   [0m [91m                         ~~~[0m[39m
+
+[31m    at createTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:859:12)[39m
+[31m    at reportTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:863:19)[39m
+[31m    at getOutput (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1077:36)[39m
+[31m    at Object.compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1433:41)[39m
+[31m    at Module.m._compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1617:30)[39m
+[31m    at loadTS (node:internal/modules/cjs/loader:1826:10)[39m
+[31m    at Object.require.extensions.<computed> [as .ts] (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1621:12)[39m
+[31m    at Module.load (node:internal/modules/cjs/loader:1469:32)[39m
+[31m    at Function._load (node:internal/modules/cjs/loader:1286:12)[39m
+[31m    at TracingChannel.traceSync (node:diagnostics_channel:322:14)[39m
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/middleware/auth.ts[0m:[93m50[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m50[0m       await auditService.log({
+[7m  [0m [91m                         ~~~[0m
+[96msrc/middleware/auth.ts[0m:[93m67[0m:[93m24[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m67[0m     await auditService.log({
+[7m  [0m [91m                       ~~~[0m
+[96msrc/middleware/auth.ts[0m:[93m112[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m112[0m         await auditService.log({
+[7m   [0m [91m                           ~~~[0m
+[96msrc/middleware/auth.ts[0m:[93m148[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m148[0m       await auditService.log({
+[7m   [0m [91m                         ~~~[0m
+
+    at createTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1617:30)
+    at loadTS (node:internal/modules/cjs/loader:1826:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1469:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-06-24 19:40:47:4047 [31merror[39m: [31muncaughtException: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m50[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m50[0m       await auditService.log({[39m
+[31m[7m  [0m [91m                         ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m67[0m:[93m24[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m67[0m     await auditService.log({[39m
+[31m[7m  [0m [91m                       ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m112[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m112[0m         await auditService.log({[39m
+[31m[7m   [0m [91m                           ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m148[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m148[0m       await auditService.log({[39m
+[31m[7m   [0m [91m                         ~~~[0m[39m
+
+[31mTSError: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m50[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m50[0m       await auditService.log({[39m
+[31m[7m  [0m [91m                         ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m67[0m:[93m24[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m67[0m     await auditService.log({[39m
+[31m[7m  [0m [91m                       ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m112[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m112[0m         await auditService.log({[39m
+[31m[7m   [0m [91m                           ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m148[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m148[0m       await auditService.log({[39m
+[31m[7m   [0m [91m                         ~~~[0m[39m
+
+[31m    at createTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:859:12)[39m
+[31m    at reportTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:863:19)[39m
+[31m    at getOutput (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1077:36)[39m
+[31m    at Object.compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1433:41)[39m
+[31m    at Module.m._compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1617:30)[39m
+[31m    at loadTS (node:internal/modules/cjs/loader:1826:10)[39m
+[31m    at Object.require.extensions.<computed> [as .ts] (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1621:12)[39m
+[31m    at Module.load (node:internal/modules/cjs/loader:1469:32)[39m
+[31m    at Function._load (node:internal/modules/cjs/loader:1286:12)[39m
+[31m    at TracingChannel.traceSync (node:diagnostics_channel:322:14)[39m
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/middleware/auth.ts[0m:[93m50[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m50[0m       await auditService.log({
+[7m  [0m [91m                         ~~~[0m
+[96msrc/middleware/auth.ts[0m:[93m67[0m:[93m24[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m67[0m     await auditService.log({
+[7m  [0m [91m                       ~~~[0m
+[96msrc/middleware/auth.ts[0m:[93m112[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m112[0m         await auditService.log({
+[7m   [0m [91m                           ~~~[0m
+[96msrc/middleware/auth.ts[0m:[93m148[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m148[0m       await auditService.log({
+[7m   [0m [91m                         ~~~[0m
+
+    at createTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1617:30)
+    at loadTS (node:internal/modules/cjs/loader:1826:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1469:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-06-24 19:41:10:4110 [31merror[39m: [31muncaughtException: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m50[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m50[0m       await auditService.log({[39m
+[31m[7m  [0m [91m                         ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m67[0m:[93m24[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m67[0m     await auditService.log({[39m
+[31m[7m  [0m [91m                       ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m112[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m112[0m         await auditService.log({[39m
+[31m[7m   [0m [91m                           ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m148[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m148[0m       await auditService.log({[39m
+[31m[7m   [0m [91m                         ~~~[0m[39m
+
+[31mTSError: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m50[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m50[0m       await auditService.log({[39m
+[31m[7m  [0m [91m                         ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m67[0m:[93m24[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m67[0m     await auditService.log({[39m
+[31m[7m  [0m [91m                       ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m112[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m112[0m         await auditService.log({[39m
+[31m[7m   [0m [91m                           ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m148[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m148[0m       await auditService.log({[39m
+[31m[7m   [0m [91m                         ~~~[0m[39m
+
+[31m    at createTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:859:12)[39m
+[31m    at reportTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:863:19)[39m
+[31m    at getOutput (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1077:36)[39m
+[31m    at Object.compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1433:41)[39m
+[31m    at Module.m._compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1617:30)[39m
+[31m    at loadTS (node:internal/modules/cjs/loader:1826:10)[39m
+[31m    at Object.require.extensions.<computed> [as .ts] (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1621:12)[39m
+[31m    at Module.load (node:internal/modules/cjs/loader:1469:32)[39m
+[31m    at Function._load (node:internal/modules/cjs/loader:1286:12)[39m
+[31m    at TracingChannel.traceSync (node:diagnostics_channel:322:14)[39m
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/middleware/auth.ts[0m:[93m50[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m50[0m       await auditService.log({
+[7m  [0m [91m                         ~~~[0m
+[96msrc/middleware/auth.ts[0m:[93m67[0m:[93m24[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m67[0m     await auditService.log({
+[7m  [0m [91m                       ~~~[0m
+[96msrc/middleware/auth.ts[0m:[93m112[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m112[0m         await auditService.log({
+[7m   [0m [91m                           ~~~[0m
+[96msrc/middleware/auth.ts[0m:[93m148[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m148[0m       await auditService.log({
+[7m   [0m [91m                         ~~~[0m
+
+    at createTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1617:30)
+    at loadTS (node:internal/modules/cjs/loader:1826:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1469:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-06-24 19:41:35:4135 [31merror[39m: [31muncaughtException: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m50[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m50[0m       await auditService.log({[39m
+[31m[7m  [0m [91m                         ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m67[0m:[93m24[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m67[0m     await auditService.log({[39m
+[31m[7m  [0m [91m                       ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m112[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m112[0m         await auditService.log({[39m
+[31m[7m   [0m [91m                           ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m148[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m148[0m       await auditService.log({[39m
+[31m[7m   [0m [91m                         ~~~[0m[39m
+
+[31mTSError: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m50[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m50[0m       await auditService.log({[39m
+[31m[7m  [0m [91m                         ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m67[0m:[93m24[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m67[0m     await auditService.log({[39m
+[31m[7m  [0m [91m                       ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m112[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m112[0m         await auditService.log({[39m
+[31m[7m   [0m [91m                           ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m148[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m148[0m       await auditService.log({[39m
+[31m[7m   [0m [91m                         ~~~[0m[39m
+
+[31m    at createTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:859:12)[39m
+[31m    at reportTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:863:19)[39m
+[31m    at getOutput (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1077:36)[39m
+[31m    at Object.compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1433:41)[39m
+[31m    at Module.m._compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1617:30)[39m
+[31m    at loadTS (node:internal/modules/cjs/loader:1826:10)[39m
+[31m    at Object.require.extensions.<computed> [as .ts] (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1621:12)[39m
+[31m    at Module.load (node:internal/modules/cjs/loader:1469:32)[39m
+[31m    at Function._load (node:internal/modules/cjs/loader:1286:12)[39m
+[31m    at TracingChannel.traceSync (node:diagnostics_channel:322:14)[39m
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/middleware/auth.ts[0m:[93m50[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m50[0m       await auditService.log({
+[7m  [0m [91m                         ~~~[0m
+[96msrc/middleware/auth.ts[0m:[93m67[0m:[93m24[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m67[0m     await auditService.log({
+[7m  [0m [91m                       ~~~[0m
+[96msrc/middleware/auth.ts[0m:[93m112[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m112[0m         await auditService.log({
+[7m   [0m [91m                           ~~~[0m
+[96msrc/middleware/auth.ts[0m:[93m148[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m148[0m       await auditService.log({
+[7m   [0m [91m                         ~~~[0m
+
+    at createTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1617:30)
+    at loadTS (node:internal/modules/cjs/loader:1826:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1469:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-06-24 19:41:48:4148 [31merror[39m: [31muncaughtException: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m50[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m50[0m       await auditService.log({[39m
+[31m[7m  [0m [91m                         ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m67[0m:[93m24[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m67[0m     await auditService.log({[39m
+[31m[7m  [0m [91m                       ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m112[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m112[0m         await auditService.log({[39m
+[31m[7m   [0m [91m                           ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m148[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m148[0m       await auditService.log({[39m
+[31m[7m   [0m [91m                         ~~~[0m[39m
+
+[31mTSError: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m50[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m50[0m       await auditService.log({[39m
+[31m[7m  [0m [91m                         ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m67[0m:[93m24[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m67[0m     await auditService.log({[39m
+[31m[7m  [0m [91m                       ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m112[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m112[0m         await auditService.log({[39m
+[31m[7m   [0m [91m                           ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m148[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m148[0m       await auditService.log({[39m
+[31m[7m   [0m [91m                         ~~~[0m[39m
+
+[31m    at createTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:859:12)[39m
+[31m    at reportTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:863:19)[39m
+[31m    at getOutput (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1077:36)[39m
+[31m    at Object.compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1433:41)[39m
+[31m    at Module.m._compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1617:30)[39m
+[31m    at loadTS (node:internal/modules/cjs/loader:1826:10)[39m
+[31m    at Object.require.extensions.<computed> [as .ts] (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1621:12)[39m
+[31m    at Module.load (node:internal/modules/cjs/loader:1469:32)[39m
+[31m    at Function._load (node:internal/modules/cjs/loader:1286:12)[39m
+[31m    at TracingChannel.traceSync (node:diagnostics_channel:322:14)[39m
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/middleware/auth.ts[0m:[93m50[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m50[0m       await auditService.log({
+[7m  [0m [91m                         ~~~[0m
+[96msrc/middleware/auth.ts[0m:[93m67[0m:[93m24[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m67[0m     await auditService.log({
+[7m  [0m [91m                       ~~~[0m
+[96msrc/middleware/auth.ts[0m:[93m112[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m112[0m         await auditService.log({
+[7m   [0m [91m                           ~~~[0m
+[96msrc/middleware/auth.ts[0m:[93m148[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m148[0m       await auditService.log({
+[7m   [0m [91m                         ~~~[0m
+
+    at createTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1617:30)
+    at loadTS (node:internal/modules/cjs/loader:1826:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1469:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-06-24 19:42:07:427 [31merror[39m: [31muncaughtException: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m50[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m50[0m       await auditService.log({[39m
+[31m[7m  [0m [91m                         ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m67[0m:[93m24[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m67[0m     await auditService.log({[39m
+[31m[7m  [0m [91m                       ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m112[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m112[0m         await auditService.log({[39m
+[31m[7m   [0m [91m                           ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m148[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m148[0m       await auditService.log({[39m
+[31m[7m   [0m [91m                         ~~~[0m[39m
+
+[31mTSError: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m50[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m50[0m       await auditService.log({[39m
+[31m[7m  [0m [91m                         ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m67[0m:[93m24[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m67[0m     await auditService.log({[39m
+[31m[7m  [0m [91m                       ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m112[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m112[0m         await auditService.log({[39m
+[31m[7m   [0m [91m                           ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m148[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m148[0m       await auditService.log({[39m
+[31m[7m   [0m [91m                         ~~~[0m[39m
+
+[31m    at createTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:859:12)[39m
+[31m    at reportTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:863:19)[39m
+[31m    at getOutput (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1077:36)[39m
+[31m    at Object.compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1433:41)[39m
+[31m    at Module.m._compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1617:30)[39m
+[31m    at loadTS (node:internal/modules/cjs/loader:1826:10)[39m
+[31m    at Object.require.extensions.<computed> [as .ts] (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1621:12)[39m
+[31m    at Module.load (node:internal/modules/cjs/loader:1469:32)[39m
+[31m    at Function._load (node:internal/modules/cjs/loader:1286:12)[39m
+[31m    at TracingChannel.traceSync (node:diagnostics_channel:322:14)[39m
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/middleware/auth.ts[0m:[93m50[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m50[0m       await auditService.log({
+[7m  [0m [91m                         ~~~[0m
+[96msrc/middleware/auth.ts[0m:[93m67[0m:[93m24[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m67[0m     await auditService.log({
+[7m  [0m [91m                       ~~~[0m
+[96msrc/middleware/auth.ts[0m:[93m112[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m112[0m         await auditService.log({
+[7m   [0m [91m                           ~~~[0m
+[96msrc/middleware/auth.ts[0m:[93m148[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m148[0m       await auditService.log({
+[7m   [0m [91m                         ~~~[0m
+
+    at createTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1617:30)
+    at loadTS (node:internal/modules/cjs/loader:1826:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1469:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-06-24 19:42:07:427 [31merror[39m: [31muncaughtException: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m50[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m50[0m       await auditService.log({[39m
+[31m[7m  [0m [91m                         ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m67[0m:[93m24[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m67[0m     await auditService.log({[39m
+[31m[7m  [0m [91m                       ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m112[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m112[0m         await auditService.log({[39m
+[31m[7m   [0m [91m                           ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m148[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m148[0m       await auditService.log({[39m
+[31m[7m   [0m [91m                         ~~~[0m[39m
+
+[31mTSError: ⨯ Unable to compile TypeScript:[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m50[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m50[0m       await auditService.log({[39m
+[31m[7m  [0m [91m                         ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m67[0m:[93m24[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m67[0m     await auditService.log({[39m
+[31m[7m  [0m [91m                       ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m112[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m112[0m         await auditService.log({[39m
+[31m[7m   [0m [91m                           ~~~[0m[39m
+[31m[96msrc/middleware/auth.ts[0m:[93m148[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.[39m
+
+[31m[7m148[0m       await auditService.log({[39m
+[31m[7m   [0m [91m                         ~~~[0m[39m
+
+[31m    at createTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:859:12)[39m
+[31m    at reportTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:863:19)[39m
+[31m    at getOutput (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1077:36)[39m
+[31m    at Object.compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1433:41)[39m
+[31m    at Module.m._compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1617:30)[39m
+[31m    at loadTS (node:internal/modules/cjs/loader:1826:10)[39m
+[31m    at Object.require.extensions.<computed> [as .ts] (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1621:12)[39m
+[31m    at Module.load (node:internal/modules/cjs/loader:1469:32)[39m
+[31m    at Function._load (node:internal/modules/cjs/loader:1286:12)[39m
+[31m    at TracingChannel.traceSync (node:diagnostics_channel:322:14)[39m
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/middleware/auth.ts[0m:[93m50[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m50[0m       await auditService.log({
+[7m  [0m [91m                         ~~~[0m
+[96msrc/middleware/auth.ts[0m:[93m67[0m:[93m24[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m67[0m     await auditService.log({
+[7m  [0m [91m                       ~~~[0m
+[96msrc/middleware/auth.ts[0m:[93m112[0m:[93m28[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m112[0m         await auditService.log({
+[7m   [0m [91m                           ~~~[0m
+[96msrc/middleware/auth.ts[0m:[93m148[0m:[93m26[0m - [91merror[0m[90m TS2339: [0mProperty 'log' does not exist on type 'AuditService'.
+
+[7m148[0m       await auditService.log({
+[7m   [0m [91m                         ~~~[0m
+
+    at createTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1617:30)
+    at loadTS (node:internal/modules/cjs/loader:1826:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/usjidnisar/Desktop/Cloud Printer/cloud-printer-server/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1469:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)

@@ -1,11 +1,13 @@
 import { Router } from 'express';
+import { PrismaClient } from '@prisma/client';
 import { ShopifyService } from '../plugins/shopify/ShopifyService';
 import { WooCommerceService } from '../plugins/woocommerce/WooCommerceService';
-import { validateWebhookSignature } from '../middleware/validateWebhookSignature';
+import { validateShopifyWebhook, validateWooCommerceWebhook } from '../middleware/validateWebhookSignature';
 import { logger } from '../utils/logger';
 import { AppError } from '../utils/AppError';
 
 const router = Router();
+const prisma = new PrismaClient();
 
 /**
  * @swagger
@@ -26,13 +28,13 @@ const router = Router();
  *         description: Webhook processed successfully
  */
 router.post('/shopify',
-  validateWebhookSignature('shopify'),
+  validateShopifyWebhook,
   async (req, res, next) => {
     try {
+      const shopDomain = req.headers['x-shopify-shop-domain'] as string;
       const topic = req.headers['x-shopify-topic'] as string;
-      const shopId = req.headers['x-shopify-shop-domain'] as string;
 
-      logger.info(`Received Shopify webhook: ${topic} from ${shopId}`);
+      logger.info(`Received Shopify webhook: ${topic} from ${shopDomain}`);
 
       // Find partner by shop domain
       const partner = await prisma.partner.findFirst({
@@ -42,7 +44,7 @@ router.post('/shopify',
               platform: 'shopify',
               config: {
                 path: ['shopDomain'],
-                equals: shopId,
+                equals: shopDomain,
               },
             },
           },
@@ -50,16 +52,28 @@ router.post('/shopify',
       });
 
       if (!partner) {
-        throw new AppError(`No partner found for Shopify shop: ${shopId}`, 404);
+        throw new AppError(`No partner found for Shopify shop: ${shopDomain}`, 404);
       }
 
       const shopifyService = new ShopifyService(partner.id);
       await shopifyService.initialize();
-      await shopifyService.handleWebhook(topic, req.body);
+
+      // Process based on webhook topic
+      switch (topic) {
+        case 'orders/create':
+          await shopifyService.processOrder(req.body);
+          break;
+        case 'orders/cancelled':
+          await shopifyService.cancelOrder(req.body);
+          break;
+        default:
+          logger.warn(`Unhandled Shopify webhook topic: ${topic}`);
+      }
 
       res.status(200).json({ status: 'success' });
     } catch (error) {
-      next(error);
+      logger.error('Error processing Shopify webhook:', error);
+      res.sendStatus(500);
     }
   }
 );
@@ -83,13 +97,13 @@ router.post('/shopify',
  *         description: Webhook processed successfully
  */
 router.post('/woocommerce',
-  validateWebhookSignature('woocommerce'),
+  validateWooCommerceWebhook,
   async (req, res, next) => {
     try {
       const topic = req.headers['x-wc-webhook-topic'] as string;
-      const sourceUrl = req.headers['x-wc-webhook-source'] as string;
+      const source = req.headers['x-wc-webhook-source'] as string;
 
-      logger.info(`Received WooCommerce webhook: ${topic} from ${sourceUrl}`);
+      logger.info(`Received WooCommerce webhook: ${topic} from ${source}`);
 
       // Find partner by WooCommerce site URL
       const partner = await prisma.partner.findFirst({
@@ -99,7 +113,7 @@ router.post('/woocommerce',
               platform: 'woocommerce',
               config: {
                 path: ['siteUrl'],
-                equals: sourceUrl,
+                equals: source,
               },
             },
           },
@@ -107,16 +121,28 @@ router.post('/woocommerce',
       });
 
       if (!partner) {
-        throw new AppError(`No partner found for WooCommerce site: ${sourceUrl}`, 404);
+        throw new AppError(`No partner found for WooCommerce site: ${source}`, 404);
       }
 
       const wooCommerceService = new WooCommerceService(partner.id);
       await wooCommerceService.initialize();
-      await wooCommerceService.handleWebhook(topic, req.body);
+
+      // Process based on webhook topic
+      switch (topic) {
+        case 'order.created':
+          await wooCommerceService.processOrder(req.body);
+          break;
+        case 'order.cancelled':
+          await wooCommerceService.cancelOrder(req.body);
+          break;
+        default:
+          logger.warn(`Unhandled WooCommerce webhook topic: ${topic}`);
+      }
 
       res.status(200).json({ status: 'success' });
     } catch (error) {
-      next(error);
+      logger.error('Error processing WooCommerce webhook:', error);
+      res.sendStatus(500);
     }
   }
 );

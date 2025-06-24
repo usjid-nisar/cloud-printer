@@ -1,7 +1,7 @@
 import { Router } from 'express';
+import { validateApiKey } from '../middleware/auth';
 import { validateRequest } from '../middleware/validateRequest';
-import { authenticatePartner } from '../middleware/auth';
-import { orderController } from '../controllers/orderController';
+import { createOrder, getOrder, getOrders, updateOrder } from '../controllers/orderController';
 import { createOrderSchema, updateOrderSchema } from '../validators/orderValidators';
 
 const router = Router();
@@ -35,34 +35,7 @@ const router = Router();
  *       201:
  *         description: Order created successfully
  */
-router.post('/',
-  authenticatePartner,
-  validateRequest(createOrderSchema),
-  orderController.createOrder
-);
-
-/**
- * @swagger
- * /v1/orders/{orderId}:
- *   get:
- *     summary: Get order by ID
- *     tags: [Orders]
- *     security:
- *       - ApiKeyAuth: []
- *     parameters:
- *       - in: path
- *         name: orderId
- *         required: true
- *         schema:
- *           type: string
- *     responses:
- *       200:
- *         description: Order details retrieved successfully
- */
-router.get('/:orderId',
-  authenticatePartner,
-  orderController.getOrder
-);
+router.post('/', validateRequest(createOrderSchema), createOrder);
 
 /**
  * @swagger
@@ -89,10 +62,27 @@ router.get('/:orderId',
  *       200:
  *         description: List of orders retrieved successfully
  */
-router.get('/',
-  authenticatePartner,
-  orderController.listOrders
-);
+router.get('/', getOrders);
+
+/**
+ * @swagger
+ * /v1/orders/{orderId}:
+ *   get:
+ *     summary: Get order by ID
+ *     tags: [Orders]
+ *     security:
+ *       - ApiKeyAuth: []
+ *     parameters:
+ *       - in: path
+ *         name: orderId
+ *         required: true
+ *         schema:
+ *           type: string
+ *     responses:
+ *       200:
+ *         description: Order details retrieved successfully
+ */
+router.get('/:orderId', getOrder);
 
 /**
  * @swagger
@@ -123,10 +113,9 @@ router.get('/',
  *       200:
  *         description: Order updated successfully
  */
-router.patch('/:orderId',
-  authenticatePartner,
-  validateRequest(updateOrderSchema),
-  orderController.updateOrder
-);
+router.patch('/:orderId', validateRequest(updateOrderSchema), updateOrder);
 
-export { router as orderRoutes }; 
+// Apply API key validation to all routes
+router.use(validateApiKey);
+
+export const orderRoutes = router; 
