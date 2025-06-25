@@ -9,54 +9,132 @@ generator client {
 }
 
 model Partner {
-  id            String   @id @default(uuid())
-  name          String
-  email         String   @unique
-  apiKey        String   @unique
-  webhookUrl    String?
-  brandingData  Json?
-  createdAt     DateTime @default(now())
-  updatedAt     DateTime @updatedAt
-  orders        Order[]
-  settings      Settings?
-  integrations  Integration[]
+  id                String         @id @default(uuid())
+  name              String
+  email             String         @unique
+  apiKey            String         @unique
+  apiKeyHash        String         // Hashed version of the API key
+  domain            String?        @unique
+  brandingSettings  Json?
+  webhookUrl        String?
+  selfProduce       Boolean        @default(false)
+  createdAt         DateTime       @default(now())
+  updatedAt         DateTime       @updatedAt
+  orders            Order[]
+  integrations      Integration[]
+  dnsRecords        DnsRecord[]
+  routingSettings   RoutingSettings?
+  users             User[]         // Added relation field for User model
 }
 
 model Order {
-  id            String   @id @default(uuid())
+  id            String    @id @default(uuid())
   partnerId     String
-  partner       Partner  @relation(fields: [partnerId], references: [id])
+  partner       Partner   @relation(fields: [partnerId], references: [id])
   orderNumber   String
-  status        String
-  items         Json
-  customerData  Json
-  metadata      Json?
-  createdAt     DateTime @default(now())
-  updatedAt     DateTime @updatedAt
+  status        String    // pending, processing, completed, failed, cancelled
+  items         Json      // Array of items with print specifications
+  customerData  Json      // Shipping and customer information
+  source        String    // shopify, woocommerce, api
+  sourceOrderId String?   // Original order ID from the source platform
+  routingAttempts Int     @default(0)
+  routedTo      String?   // cloudprinter or self
+  metadata      Json?     // Additional order metadata
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
 
   @@unique([partnerId, orderNumber])
-}
-
-model Settings {
-  id            String   @id @default(uuid())
-  partnerId     String   @unique
-  partner       Partner  @relation(fields: [partnerId], references: [id])
-  forwardingUrl String?
-  webhookSecret String?
-  preferences   Json?
-  createdAt     DateTime @default(now())
-  updatedAt     DateTime @updatedAt
+  @@index([status])
+  @@index([source])
 }
 
 model Integration {
-  id            String   @id @default(uuid())
+  id            String    @id @default(uuid())
   partnerId     String
-  partner       Partner  @relation(fields: [partnerId], references: [id])
-  platform      String   // "shopify" or "woocommerce"
-  config        Json
-  status        String
-  createdAt     DateTime @default(now())
-  updatedAt     DateTime @updatedAt
+  partner       Partner   @relation(fields: [partnerId], references: [id])
+  platform      String    // shopify, woocommerce
+  config        Json      // Platform-specific configuration
+  webhookSecret String    // Secret for webhook validation
+  status        String    // active, inactive
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
 
   @@unique([partnerId, platform])
+}
+
+model DnsRecord {
+  id            String    @id @default(uuid())
+  partnerId     String
+  partner       Partner   @relation(fields: [partnerId], references: [id])
+  type          String    // CNAME, A, etc.
+  name          String
+  value         String
+  status        String    // pending, active, failed
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  @@unique([partnerId, type, name])
+}
+
+model RoutingSettings {
+  id                String    @id @default(uuid())
+  partnerId         String    @unique
+  partner           Partner   @relation(fields: [partnerId], references: [id])
+  maxRetries        Int       @default(3)
+  selfProduceRules  Json?     // Rules for when to use self-produce
+  alertEmail        String?   // Email for routing failure alerts
+  alertWebhook      String?   // Webhook URL for routing failure alerts
+  createdAt         DateTime  @default(now())
+  updatedAt         DateTime  @updatedAt
+}
+
+// Audit log for security-related events
+model AuditLog {
+  id            String    @id @default(uuid())
+  eventType     String    // api_key_rotation, login_attempt, settings_change, etc.
+  partnerId     String?   // Optional as some events might not be partner-specific
+  ipAddress     String?
+  userAgent     String?
+  details       Json
+  createdAt     DateTime  @default(now())
+
+  @@index([eventType])
+  @@index([partnerId])
+}
+
+// User model for authentication
+model User {
+  id            String    @id @default(uuid())
+  email         String    @unique
+  password      String    // Hashed password
+  role          String    // admin or client
+  partnerId     String?   // Only for client users
+  partner       Partner?  @relation(fields: [partnerId], references: [id])
+  firstName     String?
+  lastName      String?
+  lastLoginAt   DateTime?
+  isActive      Boolean   @default(true)
+  sessions      Session[]
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  @@index([role])
+  @@index([partnerId])
+}
+
+// Session model for managing user sessions
+model Session {
+  id            String    @id @default(uuid())
+  userId        String
+  user          User      @relation(fields: [userId], references: [id])
+  token         String    @unique
+  expiresAt     DateTime
+  ipAddress     String?
+  userAgent     String?
+  isValid       Boolean   @default(true)
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  @@index([userId])
+  @@index([token])
 } 
