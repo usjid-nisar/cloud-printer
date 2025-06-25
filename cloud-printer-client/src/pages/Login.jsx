@@ -1,0 +1,124 @@
+import { useState } from 'react';
+import { login } from '../services/auth';
+
+export default function Login() {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [rememberMe, setRememberMe] = useState(false);
+  const [error, setError] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setError('');
+    setIsLoading(true);
+
+    try {
+      await login(email, password, rememberMe);
+      window.location.href = '/dashboard';
+    } catch (err) {
+      setError(err.message || 'Failed to login. Please try again.');
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  return (
+    <div 
+      className="min-h-screen flex bg-cover bg-center bg-no-repeat"
+      style={{ 
+        backgroundImage: 'url(/cb-login-1.jpg)'
+      }}
+    >
+      <div className="w-1/2 flex items-center justify-center px-8 relative">
+        {/* Purple overlay with blur effect */}
+        <div 
+          className="absolute inset-0 backdrop-blur-[40px]"
+          style={{
+            backgroundColor: 'rgba(105, 65, 198, 0.7)', // #6941C6 with 70% opacity
+          }}
+        />
+        
+        <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md relative z-10">
+          <div className="flex justify-center mb-8">
+            <img src="/cp-logo.png" alt="CloudPrinter" className="h-8" />
+          </div>
+          
+          <h2 className="text-2xl font-semibold text-center text-gray-800 mb-2">Log in</h2>
+          <p className="text-center text-gray-600 mb-8">Enter your account details.</p>
+          
+          {error && (
+            <div className="mb-4 p-3 bg-red-50 border border-red-200 text-red-600 rounded-md text-sm">
+              {error}
+            </div>
+          )}
+          
+          <form onSubmit={handleSubmit}>
+            <div className="space-y-6">
+              <div>
+                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                  Email
+                </label>
+                <input
+                  id="email"
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="Enter your email"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                  required
+                />
+              </div>
+              
+              <div>
+                <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-2">
+                  Password
+                </label>
+                <input
+                  id="password"
+                  type="password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  placeholder="••••••••"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                  required
+                />
+              </div>
+              
+              <div className="flex items-center justify-between">
+                <div className="flex items-center">
+                  <input
+                    id="remember"
+                    type="checkbox"
+                    checked={rememberMe}
+                    onChange={(e) => setRememberMe(e.target.checked)}
+                    className="h-4 w-4 text-purple-600 focus:ring-purple-500 border-gray-300 rounded"
+                  />
+                  <label htmlFor="remember" className="ml-2 block text-sm text-gray-700">
+                    Remember for 30 days
+                  </label>
+                </div>
+                <a href="/forgot-password" className="text-sm text-purple-600 hover:text-purple-500">
+                  Forgot password
+                </a>
+              </div>
+              
+              <button
+                type="submit"
+                disabled={isLoading}
+                className="w-full bg-purple-600 text-white py-2 px-4 rounded-md hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                {isLoading ? 'Signing in...' : 'Submit'}
+              </button>
+            </div>
+          </form>
+          
+          <p className="text-center text-sm text-gray-500 mt-8">
+            ©2025 CloudPrinter.
+          </p>
+        </div>
+      </div>
+      <div className="w-1/2" />
+    </div>
+  );
+} 

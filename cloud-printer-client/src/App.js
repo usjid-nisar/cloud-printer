@@ -1,10 +1,5 @@
-import Layout from './pages/Layout';
-import Home from './pages/Home';
+import Login from './pages/Login';
 
 export default function App() {
-  return (
-    <Layout>
-      <Home />
-    </Layout>
-  );
+  return <Login />;
 }
