@@ -30,6 +30,32 @@ export async function login(email, password, rememberMe) {
   }
 }
 
+export async function register({ name, email, password }) {
+  try {
+    const response = await fetch(`${API_CONFIG.BASE_URL}/auth/register`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ name, email, password }),
+    });
+
+    if (!response.ok) {
+      const error = await response.json();
+      throw new Error(error.message || 'Registration failed');
+    }
+
+    const data = await response.json();
+    
+    // Store the token in localStorage by default for new registrations
+    localStorage.setItem('token', data.token);
+
+    return data;
+  } catch (error) {
+    throw error;
+  }
+}
+
 export function logout() {
   localStorage.removeItem('token');
   sessionStorage.removeItem('token');

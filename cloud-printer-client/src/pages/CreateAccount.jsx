@@ -1,12 +1,12 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { login } from '../services/auth';
+import { register } from '../services/auth';
 
-export default function Login() {
+export default function CreateAccount() {
   const navigate = useNavigate();
+  const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [rememberMe, setRememberMe] = useState(false);
   const [error, setError] = useState('');
   const [isLoading, setIsLoading] = useState(false);
 
@@ -16,20 +16,25 @@ export default function Login() {
     setIsLoading(true);
 
     try {
-      await login(email, password, rememberMe);
+      await register({ name, email, password });
       navigate('/dashboard');
     } catch (err) {
-      setError(err.message || 'Failed to login. Please try again.');
+      setError(err.message || 'Failed to create account. Please try again.');
     } finally {
       setIsLoading(false);
     }
+  };
+
+  const handleGoogleSignUp = () => {
+    // TODO: Implement Google Sign up
+    console.log('Google sign up clicked');
   };
 
   return (
     <div 
       className="min-h-screen flex bg-cover bg-center bg-no-repeat"
       style={{ 
-        backgroundImage: 'url(/cb-login-1.jpg)'
+        backgroundImage: 'url(/signup_bg.png)'
       }}
     >
       <div className="w-1/2 flex items-center justify-center px-8 relative">
@@ -46,7 +51,7 @@ export default function Login() {
             <img src="/cp-logo.png" alt="CloudPrinter" className="h-8" />
           </div>
           
-          <h2 className="text-2xl font-semibold text-center text-gray-800 mb-2">Log in</h2>
+          <h2 className="text-2xl font-semibold text-center text-gray-800 mb-2">Create account</h2>
           <p className="text-center text-gray-600 mb-8">Enter your account details.</p>
           
           {error && (
@@ -58,8 +63,23 @@ export default function Login() {
           <form onSubmit={handleSubmit}>
             <div className="space-y-6">
               <div>
+                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                  Name<span className="text-red-500">*</span>
+                </label>
+                <input
+                  id="name"
+                  type="text"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  placeholder="Enter your name"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                  required
+                />
+              </div>
+
+              <div>
                 <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                  Email
+                  Email<span className="text-red-500">*</span>
                 </label>
                 <input
                   id="email"
@@ -74,35 +94,19 @@ export default function Login() {
               
               <div>
                 <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-2">
-                  Password
+                  Password<span className="text-red-500">*</span>
                 </label>
                 <input
                   id="password"
                   type="password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  placeholder="••••••••"
+                  placeholder="Create a password"
                   className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                   required
+                  minLength={8}
                 />
-              </div>
-              
-              <div className="flex items-center justify-between">
-                <div className="flex items-center">
-                  <input
-                    id="remember"
-                    type="checkbox"
-                    checked={rememberMe}
-                    onChange={(e) => setRememberMe(e.target.checked)}
-                    className="h-4 w-4 text-purple-600 focus:ring-purple-500 border-gray-300 rounded"
-                  />
-                  <label htmlFor="remember" className="ml-2 block text-sm text-gray-700">
-                    Remember for 30 days
-                  </label>
-                </div>
-                <Link to="/forgot-password" className="text-sm text-purple-600 hover:text-purple-500">
-                  Forgot password
-                </Link>
+                <p className="mt-1 text-sm text-gray-500">Must be at least 8 characters.</p>
               </div>
               
               <button
@@ -110,13 +114,35 @@ export default function Login() {
                 disabled={isLoading}
                 className="w-full bg-purple-600 text-white py-2 px-4 rounded-md hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                {isLoading ? 'Signing in...' : 'Submit'}
+                {isLoading ? 'Creating account...' : 'Create account'}
+              </button>
+
+              <div className="relative">
+                <div className="absolute inset-0 flex items-center">
+                  <div className="w-full border-t border-gray-300"></div>
+                </div>
+                <div className="relative flex justify-center text-sm">
+                  <span className="px-2 bg-white text-gray-500">or</span>
+                </div>
+              </div>
+
+              <button
+                type="button"
+                onClick={handleGoogleSignUp}
+                className="w-full flex items-center justify-center px-4 py-2 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium text-gray-700 hover:bg-gray-50"
+              >
+                <img
+                  className="h-5 w-5 mr-2"
+                  src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg"
+                  alt="Google logo"
+                />
+                Sign up with Google
               </button>
 
               <p className="text-center text-sm text-gray-600">
-                Don't have an account?{' '}
-                <Link to="/register" className="text-purple-600 hover:text-purple-500 font-medium">
-                  Create one
+                Already have an account?{' '}
+                <Link to="/login" className="text-purple-600 hover:text-purple-500 font-medium">
+                  Log in
                 </Link>
               </p>
             </div>
