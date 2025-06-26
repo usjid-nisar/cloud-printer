@@ -2,6 +2,8 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import Login from './pages/Login';
 import CreateAccount from './pages/CreateAccount';
 import { isAuthenticated } from './services/auth';
+import Dashboard from './pages/Dashboard';
+import OrderStatus from "./pages/OrderStatus";
 
 function PrivateRoute({ children }) {
   return isAuthenticated() ? children : <Navigate to="/login" />;
@@ -35,19 +37,35 @@ export default function App() {
 
         {/* Private Routes */}
         <Route 
+        path="/dashboard" 
+        element={
+          <PublicRoute>
+            <Dashboard />
+          </PublicRoute>
+        } 
+      />
+      <Route 
+        path="/order-status" 
+        element={
+          <PublicRoute>
+            <OrderStatus />
+          </PublicRoute>
+        } 
+        />
+        {/* <Route 
           path="/dashboard" 
           element={
-            <PrivateRoute>
-              <div>Dashboard (Coming Soon)</div>
-            </PrivateRoute>
+            <PublicRoute>
+              <Dashboard/>
+            </PublicRoute>
           } 
-        />
+        /> */}
 
         {/* Redirect root to login */}
-        <Route path="/" element={<Navigate to="/login" replace />} />
+        {/* <Route path="/" element={<Navigate to="/login" replace />} /> */}
 
         {/* 404 Route */}
-        <Route path="*" element={<Navigate to="/login" replace />} />
+        {/* <Route path="*" element={<Navigate to="/login" replace />} /> */}
       </Routes>
     </Router>
   );
