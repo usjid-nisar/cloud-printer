@@ -37,35 +37,27 @@ export default function App() {
 
         {/* Private Routes */}
         <Route 
-        path="/dashboard" 
-        element={
-          <PublicRoute>
-            <Dashboard />
-          </PublicRoute>
-        } 
-      />
-      <Route 
-        path="/order-status" 
-        element={
-          <PublicRoute>
-            <OrderStatus />
-          </PublicRoute>
-        } 
-        />
-        {/* <Route 
           path="/dashboard" 
           element={
-            <PublicRoute>
-              <Dashboard/>
-            </PublicRoute>
+            <PrivateRoute>
+              <Dashboard />
+            </PrivateRoute>
           } 
-        /> */}
+        />
+        <Route 
+          path="/order-status" 
+          element={
+            <PrivateRoute>
+              <OrderStatus />
+            </PrivateRoute>
+          } 
+        />
 
         {/* Redirect root to login */}
-        {/* <Route path="/" element={<Navigate to="/login" replace />} /> */}
+        <Route path="/" element={<Navigate to="/login" replace />} />
 
         {/* 404 Route */}
-        {/* <Route path="*" element={<Navigate to="/login" replace />} /> */}
+        <Route path="*" element={<Navigate to="/login" replace />} />
       </Routes>
     </Router>
   );
