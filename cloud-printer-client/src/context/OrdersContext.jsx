@@ -1,4 +1,5 @@
-import React, { createContext, useContext, useState } from "react";
+import React, { createContext, useContext, useState, useEffect, useCallback } from "react";
+import { getOrders, updateOrderStatus } from "../services/order";
 
 // Example initial orders (add more as needed)
 const initialOrders = [
@@ -97,9 +98,66 @@ const initialOrders = [
 const OrdersContext = createContext();
 
 export function OrdersProvider({ children }) {
-  const [orders, setOrders] = useState(initialOrders);
+  const [orders, setOrders] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const [page, setPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(1);
+  const [filters, setFilters] = useState({});
+
+  const fetchOrders = useCallback(async () => {
+    try {
+      setLoading(true);
+      setError(null);
+      const response = await getOrders(page, 10, filters);
+      setOrders(response.orders);
+      setTotalPages(response.totalPages);
+    } catch (err) {
+      setError(err.message);
+    } finally {
+      setLoading(false);
+    }
+  }, [page, filters]);
+
+  useEffect(() => {
+    fetchOrders();
+  }, [fetchOrders]);
+
+  const updateOrder = async (orderId, status) => {
+    try {
+      await updateOrderStatus(orderId, status);
+      // Refresh orders after update
+      fetchOrders();
+    } catch (err) {
+      setError(err.message);
+      throw err;
+    }
+  };
+
+  const applyFilters = (newFilters) => {
+    setFilters(newFilters);
+    setPage(1); // Reset to first page when filters change
+  };
+
+  const changePage = (newPage) => {
+    setPage(newPage);
+  };
+
   return (
-    <OrdersContext.Provider value={{ orders, setOrders }}>
+    <OrdersContext.Provider 
+      value={{ 
+        orders, 
+        loading, 
+        error, 
+        page,
+        totalPages,
+        filters,
+        updateOrder,
+        applyFilters,
+        changePage,
+        refreshOrders: fetchOrders
+      }}
+    >
       {children}
     </OrdersContext.Provider>
   );

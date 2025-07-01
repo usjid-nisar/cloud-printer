@@ -1,101 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Sidebar from "../components/Sidebar";
 import Topbar from "../components/Topbar";
 import ViewModal from "../components/ViewModal";
 import { useOrders } from "../context/OrdersContext";
-
-const initialOrders = [
-  {
-    id: 1,
-    client: { name: "Circooles", url: "getcirooles.com", avatar: "https://i.pravatar.cc/32?img=1" },
-    orderId: "123456",
-    date: "Jan 8, 2025",
-    status: "In progress",
-    integration: "Shopify",
-    forwarded: true,
-  },
-  {
-    id: 2,
-    client: { name: "Catalog", url: "catalogapp.io", avatar: "https://i.pravatar.cc/32?img=2" },
-    orderId: "123456",
-    date: "Jan 8, 2025",
-    status: "In progress",
-    integration: "WooCommerce",
-    forwarded: false,
-  },
-  {
-    id: 3,
-    client: { name: "Hourglass", url: "hourglass.app", avatar: "https://i.pravatar.cc/32?img=3" },
-    orderId: "123456",
-    date: "Jan 8, 2025",
-    status: "In progress",
-    integration: "Shopify",
-    forwarded: true,
-  },
-  {
-    id: 4,
-    client: { name: "Command+R", url: "cmdr.ai", avatar: "https://i.pravatar.cc/32?img=4" },
-    orderId: "123456",
-    date: "Jan 8, 2025",
-    status: "In progress",
-    integration: "WooCommerce",
-    forwarded: false,
-  },
-  {
-    id: 5,
-    client: { name: "Quotient", url: "quotient.co", avatar: "https://i.pravatar.cc/32?img=5" },
-    orderId: "123456",
-    date: "Jan 8, 2025",
-    status: "In progress",
-    integration: "Shopify",
-    forwarded: false,
-  },
-  {
-    id: 6,
-    client: { name: "Sisyphus", url: "sisyphus.com", avatar: "https://i.pravatar.cc/32?img=6" },
-    orderId: "123456",
-    date: "Jan 8, 2025",
-    status: "Failed",
-    integration: "WooCommerce",
-    forwarded: true,
-  },
-  {
-    id: 7,
-    client: { name: "Circooles", url: "getcirooles.com", avatar: "https://i.pravatar.cc/32?img=1" },
-    orderId: "123456",
-    date: "Jan 8, 2025",
-    status: "Failed",
-    integration: "Shopify",
-    forwarded: false,
-  },
-  {
-    id: 8,
-    client: { name: "Catalog", url: "catalogapp.io", avatar: "https://i.pravatar.cc/32?img=2" },
-    orderId: "123456",
-    date: "Jan 8, 2025",
-    status: "Completed",
-    integration: "WooCommerce",
-    forwarded: true,
-  },
-  {
-    id: 9,
-    client: { name: "Hourglass", url: "hourglass.app", avatar: "https://i.pravatar.cc/32?img=3" },
-    orderId: "123456",
-    date: "Jan 8, 2025",
-    status: "Completed",
-    integration: "Shopify",
-    forwarded: false,
-  },
-  {
-    id: 10,
-    client: { name: "Command+R", url: "cmdr.ai", avatar: "https://i.pravatar.cc/32?img=4" },
-    orderId: "123456",
-    date: "Jan 8, 2025",
-    status: "Completed",
-    integration: "WooCommerce",
-    forwarded: true,
-  },
-];
 
 const statusColors = {
   "In progress": "bg-yellow-100 text-yellow-700",
@@ -106,55 +13,126 @@ const statusOptions = ["All", "In progress", "Failed", "Completed"];
 const ORDERS_PER_PAGE = 8;
 
 export default function OrderStatus() {
-  const { orders, setOrders } = useOrders();
-  const [page, setPage] = useState(1);
+  const { 
+    orders, 
+    loading, 
+    error, 
+    page, 
+    totalPages, 
+    updateOrder, 
+    applyFilters, 
+    changePage,
+    refreshOrders 
+  } = useOrders();
+
   const [editRow, setEditRow] = useState(null);
   const [editData, setEditData] = useState({});
   const [viewOrder, setViewOrder] = useState(null);
   const [search, setSearch] = useState("");
   const [filter, setFilter] = useState("All");
+  const [selectedOrders, setSelectedOrders] = useState(new Set());
 
-  // Filtering and searching
-  const filteredOrders = orders.filter(order => {
-    const matchesStatus = filter === "All" || order.status === filter;
-    const matchesSearch =
-      order.client.name.toLowerCase().includes(search.toLowerCase()) ||
-      order.client.url.toLowerCase().includes(search.toLowerCase()) ||
-      order.orderId.includes(search);
-    return matchesStatus && matchesSearch;
-  });
-
-  const totalPages = Math.ceil(filteredOrders.length / ORDERS_PER_PAGE);
-  const pagedOrders = filteredOrders.slice((page - 1) * ORDERS_PER_PAGE, page * ORDERS_PER_PAGE);
+  // Reset selected orders when page changes
+  useEffect(() => {
+    setSelectedOrders(new Set());
+  }, [page]);
 
   // Handlers
-  const handleDelete = (id) => {
-    setOrders(orders.filter((o) => o.id !== id));
-    setEditRow(null);
-    setViewOrder(null);
+  const handleDelete = async (id) => {
+    try {
+      await updateOrder(id, 'deleted');
+      setEditRow(null);
+      setViewOrder(null);
+      refreshOrders();
+    } catch (err) {
+      console.error('Failed to delete order:', err);
+    }
   };
+
   const handleEdit = (idx) => {
     setEditRow(idx);
-    setEditData(pagedOrders[idx]);
+    setEditData(orders[idx]);
   };
-  const handleChange = (e) => setEditData({ ...editData, [e.target.name]: e.target.value });
-  const handleClientNameChange = (e) => setEditData({ ...editData, client: { ...editData.client, name: e.target.value } });
-  const handleSave = (idx) => {
-    const updated = [...orders];
-    const globalIdx = orders.findIndex(o => o.id === pagedOrders[idx].id);
-    updated[globalIdx] = editData;
-    setOrders(updated);
-    setEditRow(null);
+
+  const handleSave = async (idx) => {
+    try {
+      await updateOrder(editData.id, editData.status);
+      setEditRow(null);
+      refreshOrders();
+    } catch (err) {
+      console.error('Failed to update order:', err);
+    }
   };
+
   const handleCancel = () => setEditRow(null);
 
   // Filter and search handlers
-  const handleFilter = (status) => { setFilter(status); setPage(1); };
-  const handleSearch = (e) => setSearch(e.target.value);
+  const handleFilter = (status) => {
+    setFilter(status);
+    applyFilters({
+      status: status === "All" ? undefined : status,
+      search
+    });
+  };
 
-  // Submit/Cancel buttons
-  const handleSubmit = () => alert("Submitted!");
-  const handleCancelBtn = () => alert("Cancelled!");
+  const handleSearch = (e) => {
+    const value = e.target.value;
+    setSearch(value);
+    applyFilters({
+      status: filter === "All" ? undefined : filter,
+      search: value
+    });
+  };
+
+  // Selection handlers
+  const handleSelectAll = (e) => {
+    if (e.target.checked) {
+      setSelectedOrders(new Set(orders.map(o => o.id)));
+    } else {
+      setSelectedOrders(new Set());
+    }
+  };
+
+  const handleSelectOrder = (e, orderId) => {
+    const newSelected = new Set(selectedOrders);
+    if (e.target.checked) {
+      newSelected.add(orderId);
+    } else {
+      newSelected.delete(orderId);
+    }
+    setSelectedOrders(newSelected);
+  };
+
+  // Bulk actions
+  const handleBulkAction = async (action) => {
+    try {
+      const promises = Array.from(selectedOrders).map(id => 
+        updateOrder(id, action)
+      );
+      await Promise.all(promises);
+      setSelectedOrders(new Set());
+      refreshOrders();
+    } catch (err) {
+      console.error('Failed to perform bulk action:', err);
+    }
+  };
+
+  if (loading) {
+    return (
+      <div className="flex h-screen bg-gray-50">
+        <Sidebar active="Order Status" />
+        <div className="flex-1 flex flex-col">
+          <Topbar />
+          <main className="flex-1 overflow-y-auto px-8 py-6">
+            <div className="flex items-center justify-center h-full">
+              <div className="animate-spin text-purple-600">↻</div>
+              <span className="ml-2">Loading orders...</span>
+            </div>
+          </main>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="flex h-screen bg-gray-50">
@@ -163,6 +141,19 @@ export default function OrderStatus() {
         <Topbar />
         <main className="flex-1 overflow-y-auto px-8 py-6">
           <h1 className="text-2xl font-bold mb-4">Order Status</h1>
+
+          {error && (
+            <div className="bg-red-50 text-red-600 p-4 rounded mb-4">
+              {error}
+              <button 
+                onClick={refreshOrders}
+                className="ml-2 underline hover:no-underline"
+              >
+                Try again
+              </button>
+            </div>
+          )}
+
           {/* Filters and Search */}
           <div className="flex flex-wrap items-center justify-between mb-4 gap-2">
             <div className="flex gap-2">
@@ -179,24 +170,27 @@ export default function OrderStatus() {
             <div className="flex items-center gap-2">
               <input
                 type="text"
-                placeholder="Search"
+                placeholder="Search by client name, URL, or order ID"
                 value={search}
                 onChange={handleSearch}
                 className="px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-purple-300"
               />
-              <button className="flex items-center gap-1 px-3 py-2 border rounded text-gray-600 hover:bg-gray-100">
-                <svg width="16" height="16" fill="none" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/></svg>
-                Filters
-              </button>
             </div>
           </div>
+
           {/* Orders Table */}
           <div className="bg-white rounded-xl shadow p-6">
             <div className="overflow-x-auto">
               <table className="min-w-full text-sm">
                 <thead>
                   <tr className="text-left text-gray-500 border-b">
-                    <th className="py-2 px-2"><input type="checkbox" /></th>
+                    <th className="py-2 px-2">
+                      <input 
+                        type="checkbox" 
+                        checked={selectedOrders.size === orders.length}
+                        onChange={handleSelectAll}
+                      />
+                    </th>
                     <th className="py-2 px-2">Client Name</th>
                     <th className="py-2 px-2">Order ID</th>
                     <th className="py-2 px-2">Order Date</th>
@@ -206,9 +200,15 @@ export default function OrderStatus() {
                   </tr>
                 </thead>
                 <tbody>
-                  {pagedOrders.map((order, idx) => (
+                  {orders.map((order, idx) => (
                     <tr key={order.id} className="border-b last:border-0">
-                      <td className="py-2 px-2"><input type="checkbox" /></td>
+                      <td className="py-2 px-2">
+                        <input 
+                          type="checkbox"
+                          checked={selectedOrders.has(order.id)}
+                          onChange={(e) => handleSelectOrder(e, order.id)}
+                        />
+                      </td>
                       <td className="py-2 px-2 flex items-center gap-2">
                         <img src={order.client.avatar} alt="" className="w-7 h-7 rounded-full" />
                         <div>
@@ -216,7 +216,10 @@ export default function OrderStatus() {
                             <input
                               name="clientName"
                               value={editData.client?.name || ""}
-                              onChange={handleClientNameChange}
+                              onChange={(e) => setEditData({
+                                ...editData,
+                                client: { ...editData.client, name: e.target.value }
+                              })}
                               className="border px-2 py-1 rounded"
                             />
                           ) : (
@@ -232,11 +235,11 @@ export default function OrderStatus() {
                           <select
                             name="status"
                             value={editData.status}
-                            onChange={handleChange}
+                            onChange={(e) => setEditData({ ...editData, status: e.target.value })}
                             className="border px-2 py-1 rounded"
                           >
                             {statusOptions.slice(1).map((s) => (
-                              <option key={s}>{s}</option>
+                              <option key={s} value={s}>{s}</option>
                             ))}
                           </select>
                         ) : (
@@ -272,6 +275,7 @@ export default function OrderStatus() {
                 </tbody>
               </table>
             </div>
+
             {/* Pagination and Actions */}
             <div className="flex items-center justify-between mt-4">
               <div className="flex gap-1">
@@ -279,22 +283,28 @@ export default function OrderStatus() {
                   <button
                     key={i}
                     className={`w-8 h-8 rounded ${page === i + 1 ? "bg-purple-100 text-purple-700" : "hover:bg-gray-100"}`}
-                    onClick={() => { setEditRow(null); setPage(i + 1); }}
+                    onClick={() => changePage(i + 1)}
                   >
                     {i + 1}
                   </button>
                 ))}
-                <button
-                  className="w-8 h-8 rounded hover:bg-gray-100"
-                  onClick={() => { if (page < totalPages) { setEditRow(null); setPage(page + 1); } }}
-                >
-                  <svg width="16" height="16" fill="none" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
-                </button>
               </div>
-              <div className="flex gap-2">
-                <button className="px-5 py-2 rounded bg-gray-100 text-gray-700 font-medium" onClick={handleCancelBtn}>Cancel</button>
-                <button className="px-5 py-2 rounded bg-purple-600 text-white font-medium" onClick={handleSubmit}>Submit</button>
-              </div>
+              {selectedOrders.size > 0 && (
+                <div className="flex gap-2">
+                  <button 
+                    className="px-4 py-2 rounded bg-red-50 text-red-600 font-medium hover:bg-red-100"
+                    onClick={() => handleBulkAction('deleted')}
+                  >
+                    Delete Selected
+                  </button>
+                  <button 
+                    className="px-4 py-2 rounded bg-green-50 text-green-600 font-medium hover:bg-green-100"
+                    onClick={() => handleBulkAction('Completed')}
+                  >
+                    Mark as Completed
+                  </button>
+                </div>
+              )}
             </div>
             {viewOrder && <ViewModal order={viewOrder} onClose={() => setViewOrder(null)} />}
           </div>

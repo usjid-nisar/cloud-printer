@@ -42,7 +42,7 @@ export default function App() {
 
         {/* Private Routes */}
         <Route 
-        path="/dashboard" 
+        path="/" 
         element={
           <PublicRoute>
             <Dashboard />

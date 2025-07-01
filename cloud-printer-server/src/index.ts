@@ -28,8 +28,16 @@ const app = express();
 // Set security HTTP headers
 app.use(helmet());
 
-// Enable CORS
-app.use(cors());
+// Enable CORS with specific configuration
+app.use(cors({
+  origin: [
+    'http://localhost:3000',  // Admin frontend
+    'http://localhost:3002',  // Client frontend
+  ],
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+}));
 
 // Parse JSON bodies
 app.use(express.json({ limit: '10mb' }));

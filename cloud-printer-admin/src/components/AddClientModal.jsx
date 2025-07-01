@@ -1,8 +1,14 @@
 import React, { useState } from "react";
 import BrandingDetailsForm from "./BrandingDetailsForm";
+import { createClient } from "../services/client";
+import SuccessAlert from "./SuccessAlert";
 
-export default function AddClientModal({ open, onClose }) {
+export default function AddClientModal({ open, onClose, onClientAdded }) {
   const [showBranding, setShowBranding] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
+  const [success, setSuccess] = useState(false);
+  const [brandingData, setBrandingData] = useState(null);
   const [form, setForm] = useState({
     email: "",
     password: "",
@@ -10,6 +16,47 @@ export default function AddClientModal({ open, onClose }) {
     resellerApiKey: "",
     printPartnerApiKey: "",
   });
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    setError(null);
+    
+    try {
+      const clientData = {
+        ...form,
+        brandingData,
+      };
+      
+      const result = await createClient(clientData);
+      setSuccess(true);
+      onClientAdded?.(result);
+      
+      // Reset form after successful submission
+      setTimeout(() => {
+        setForm({
+          email: "",
+          password: "",
+          domain: "",
+          resellerApiKey: "",
+          printPartnerApiKey: "",
+        });
+        setBrandingData(null);
+        setShowBranding(false);
+        setSuccess(false);
+        onClose();
+      }, 2000);
+    } catch (err) {
+      setError(err.message);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleBrandingSubmit = (data) => {
+    setBrandingData(data);
+    setShowBranding(false);
+  };
 
   if (!open) return null;
 
@@ -35,13 +82,20 @@ export default function AddClientModal({ open, onClose }) {
           &times;
         </button>
         <h2 className="text-xl font-semibold mb-6">Add new client account</h2>
+        
+        {error && (
+          <div className="bg-red-50 text-red-600 p-3 rounded mb-4">
+            {error}
+          </div>
+        )}
+        
+        {success && (
+          <SuccessAlert message="Client added successfully!" />
+        )}
+        
         <form
           className="flex flex-col gap-5 flex-1"
-          onSubmit={e => {
-            e.preventDefault();
-            // handle submit here
-            onClose();
-          }}
+          onSubmit={handleSubmit}
         >
           <div className="flex items-center">
             <label className="block font-semibold w-56">Client Email ID</label>
@@ -103,29 +157,52 @@ export default function AddClientModal({ open, onClose }) {
             </div>
             <button
               type="button"
-              className="flex-1 bg-gray-100 px-4 py-2 rounded flex items-center justify-center gap-2 font-semibold"
+              className={`flex-1 px-4 py-2 rounded flex items-center justify-center gap-2 font-semibold ${
+                brandingData 
+                  ? 'bg-green-100 text-green-700' 
+                  : 'bg-gray-100'
+              }`}
               onClick={() => setShowBranding(true)}
               disabled={showBranding}
             >
-              Add Branding Details <span className="text-xl">+</span>
+              {brandingData ? (
+                <>Branding Details Added ✓</>
+              ) : (
+                <>Add Branding Details <span className="text-xl">+</span></>
+              )}
             </button>
           </div>
           {showBranding && (
-            <BrandingDetailsForm onClose={() => setShowBranding(false)} />
+            <BrandingDetailsForm 
+              onClose={() => setShowBranding(false)}
+              onSubmit={handleBrandingSubmit}
+              initialData={brandingData}
+            />
           )}
           <div className="flex justify-end mt-auto gap-2">
             <button
               type="button"
               className="px-4 py-2 rounded border border-gray-300 bg-white hover:bg-gray-100"
               onClick={onClose}
+              disabled={loading}
             >
               Cancel
             </button>
             <button
               type="submit"
-              className="px-4 py-2 rounded bg-purple-600 text-white font-semibold hover:bg-purple-700"
+              className={`px-4 py-2 rounded bg-purple-600 text-white font-semibold hover:bg-purple-700 flex items-center gap-2 ${
+                loading ? 'opacity-75 cursor-not-allowed' : ''
+              }`}
+              disabled={loading}
             >
-              Add Client
+              {loading ? (
+                <>
+                  <span className="animate-spin">↻</span>
+                  Adding Client...
+                </>
+              ) : (
+                'Add Client'
+              )}
             </button>
           </div>
         </form>

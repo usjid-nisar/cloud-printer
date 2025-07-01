@@ -37,11 +37,11 @@ export default function App() {
 
         {/* Private Routes */}
         <Route 
-          path="/" 
+          path="/dashboard" 
           element={
-            <PublicRoute>
+            <PrivateRoute>
               <Dashboard />
-            </PublicRoute>
+            </PrivateRoute>
           } 
         />
 

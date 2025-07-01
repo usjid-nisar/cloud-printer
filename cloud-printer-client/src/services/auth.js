@@ -2,12 +2,12 @@ import { API_CONFIG } from '../constants/config';
 
 export async function login(email, password, rememberMe) {
   try {
-    const response = await fetch(`${API_CONFIG.BASE_URL}/auth/login`, {
+    const response = await fetch(`${API_CONFIG.BASE_URL}/api/auth/login`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ email, password, rememberMe }),
+      body: JSON.stringify({ email, password }),
     });
 
     if (!response.ok) {
@@ -16,12 +16,19 @@ export async function login(email, password, rememberMe) {
     }
 
     const data = await response.json();
+
+    // Verify that the user is a client
+    if (data.user.role !== 'client') {
+      throw new Error('Unauthorized. Client access only.');
+    }
     
-    // Store the token in localStorage or sessionStorage based on rememberMe
+    // Store the token and user data
     if (rememberMe) {
       localStorage.setItem('token', data.token);
+      localStorage.setItem('user', JSON.stringify(data.user));
     } else {
       sessionStorage.setItem('token', data.token);
+      sessionStorage.setItem('user', JSON.stringify(data.user));
     }
 
     return data;
@@ -30,14 +37,25 @@ export async function login(email, password, rememberMe) {
   }
 }
 
-export async function register({ name, email, password }) {
+export async function register({ email, password, firstName, lastName, partnerId }) {
   try {
-    const response = await fetch(`${API_CONFIG.BASE_URL}/auth/register`, {
+    if (!partnerId) {
+      throw new Error('Partner ID is required for registration');
+    }
+
+    const response = await fetch(`${API_CONFIG.BASE_URL}/api/auth/register`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ name, email, password }),
+      body: JSON.stringify({ 
+        email, 
+        password,
+        firstName,
+        lastName,
+        role: 'client',
+        partnerId
+      }),
     });
 
     if (!response.ok) {
@@ -47,8 +65,9 @@ export async function register({ name, email, password }) {
 
     const data = await response.json();
     
-    // Store the token in localStorage by default for new registrations
+    // Store the token and user data
     localStorage.setItem('token', data.token);
+    localStorage.setItem('user', JSON.stringify(data.user));
 
     return data;
   } catch (error) {
@@ -56,16 +75,57 @@ export async function register({ name, email, password }) {
   }
 }
 
-export function logout() {
-  localStorage.removeItem('token');
-  sessionStorage.removeItem('token');
-  window.location.href = '/login';
+export async function getCurrentUser() {
+  try {
+    const token = getToken();
+    const response = await fetch(`${API_CONFIG.BASE_URL}/api/auth/me`, {
+      headers: {
+        'Authorization': `Bearer ${token}`
+      },
+    });
+
+    if (!response.ok) {
+      throw new Error('Failed to fetch user data');
+    }
+
+    const user = await response.json();
+    return user;
+  } catch (error) {
+    throw error;
+  }
+}
+
+export async function logout() {
+  try {
+    const token = getToken();
+    await fetch(`${API_CONFIG.BASE_URL}/api/auth/logout`, {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${token}`
+      },
+    });
+  } catch (error) {
+    console.error('Logout error:', error);
+  } finally {
+    localStorage.removeItem('token');
+    localStorage.removeItem('user');
+    sessionStorage.removeItem('token');
+    sessionStorage.removeItem('user');
+    window.location.href = '/login';
+  }
 }
 
 export function getToken() {
   return localStorage.getItem('token') || sessionStorage.getItem('token');
 }
 
+export function getUser() {
+  const user = localStorage.getItem('user') || sessionStorage.getItem('user');
+  return user ? JSON.parse(user) : null;
+}
+
 export function isAuthenticated() {
-  return !!getToken();
+  const token = getToken();
+  const user = getUser();
+  return !!token && !!user && user.role === 'client';
 } 

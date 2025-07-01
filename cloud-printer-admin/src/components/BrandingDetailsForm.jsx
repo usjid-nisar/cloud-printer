@@ -1,20 +1,59 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FiUploadCloud } from "react-icons/fi";
 
-export default function BrandingDetailsForm({ onClose }) {
-  const [companyName, setCompanyName] = useState("Cloud Printer");
-  const [email, setEmail] = useState("olivia@untitledui.com");
-  const [logo, setLogo] = useState(null);
-  const [primaryColor, setPrimaryColor] = useState("#B692F6");
-  const [secondaryColor, setSecondaryColor] = useState("#0D141C");
-  const [buttonColor, setButtonColor] = useState("#7F56D9");
-  const [font, setFont] = useState("Inter");
+export default function BrandingDetailsForm({ onClose, onSubmit, initialData }) {
+  const [companyName, setCompanyName] = useState(initialData?.companyName || "");
+  const [email, setEmail] = useState(initialData?.email || "");
+  const [logo, setLogo] = useState(initialData?.logo || null);
+  const [logoFile, setLogoFile] = useState(null);
+  const [primaryColor, setPrimaryColor] = useState(initialData?.primaryColor || "#B692F6");
+  const [secondaryColor, setSecondaryColor] = useState(initialData?.secondaryColor || "#0D141C");
+  const [buttonColor, setButtonColor] = useState(initialData?.buttonColor || "#7F56D9");
+  const [font, setFont] = useState(initialData?.font || "Inter");
+
+  useEffect(() => {
+    if (initialData) {
+      setCompanyName(initialData.companyName || "");
+      setEmail(initialData.email || "");
+      setLogo(initialData.logo || null);
+      setPrimaryColor(initialData.primaryColor || "#B692F6");
+      setSecondaryColor(initialData.secondaryColor || "#0D141C");
+      setButtonColor(initialData.buttonColor || "#7F56D9");
+      setFont(initialData.font || "Inter");
+    }
+  }, [initialData]);
 
   // Handle file upload
-  const handleLogoChange = (e) => {
+  const handleLogoChange = async (e) => {
     if (e.target.files && e.target.files[0]) {
-      setLogo(URL.createObjectURL(e.target.files[0]));
+      const file = e.target.files[0];
+      setLogoFile(file);
+      setLogo(URL.createObjectURL(file));
     }
+  };
+
+  const handleSubmit = async () => {
+    // Convert logo file to base64 if exists
+    let logoBase64 = null;
+    if (logoFile) {
+      const reader = new FileReader();
+      logoBase64 = await new Promise((resolve) => {
+        reader.onloadend = () => resolve(reader.result);
+        reader.readAsDataURL(logoFile);
+      });
+    }
+
+    const brandingData = {
+      companyName,
+      email,
+      logo: logoBase64 || logo, // Use existing logo if no new file
+      primaryColor,
+      secondaryColor,
+      buttonColor,
+      font,
+    };
+
+    onSubmit(brandingData);
   };
 
   return (
@@ -26,9 +65,10 @@ export default function BrandingDetailsForm({ onClose }) {
             <label className="block font-semibold mb-1">Company Name</label>
             <input
               className="w-full border rounded px-3 py-2"
-              placeholder="Cloud Printer"
+              placeholder="Enter company name"
               value={companyName}
               onChange={e => setCompanyName(e.target.value)}
+              required
             />
           </div>
           <div className="mb-4">
@@ -37,9 +77,11 @@ export default function BrandingDetailsForm({ onClose }) {
               <span className="mr-2 text-gray-400">@</span>
               <input
                 className="flex-1 outline-none"
-                placeholder="olivia@untitledui.com"
+                type="email"
+                placeholder="Enter company email"
                 value={email}
                 onChange={e => setEmail(e.target.value)}
+                required
               />
             </div>
           </div>
@@ -83,6 +125,7 @@ export default function BrandingDetailsForm({ onClose }) {
                   onChange={e => setPrimaryColor(e.target.value)}
                 />
                 <button
+                  type="button"
                   className="ml-4 px-4 py-2 rounded"
                   style={{ background: primaryColor, color: "#fff" }}
                 >
@@ -106,7 +149,7 @@ export default function BrandingDetailsForm({ onClose }) {
                   value={secondaryColor}
                   onChange={e => setSecondaryColor(e.target.value)}
                 />
-                <span className="ml-4 text-gray-700">Text color will look like this</span>
+                <span className="ml-4" style={{ color: secondaryColor }}>Text color will look like this</span>
               </div>
               <div className="text-xs text-gray-500">This will be used for paragraph text</div>
             </div>
@@ -126,6 +169,7 @@ export default function BrandingDetailsForm({ onClose }) {
                   onChange={e => setButtonColor(e.target.value)}
                 />
                 <button
+                  type="button"
                   className="ml-4 px-4 py-2 rounded"
                   style={{ background: buttonColor, color: "#fff" }}
                 >
@@ -147,20 +191,27 @@ export default function BrandingDetailsForm({ onClose }) {
                   <option value="Roboto">Roboto</option>
                   <option value="Arial">Arial</option>
                 </select>
-                <span className="ml-4 font-semibold">Selected Font <span className="font-bold">{font}</span></span>
+                <span className="ml-4" style={{ fontFamily: font }}>Selected Font <span className="font-bold">{font}</span></span>
               </div>
               <div className="text-xs text-gray-500">Text font style will look like this</div>
             </div>
           </div>
         </div>
       </div>
-      <div className="flex justify-end mt-6">
+      <div className="flex justify-end mt-6 gap-2">
         <button
           type="button"
           className="px-4 py-2 rounded border border-gray-300 bg-white hover:bg-gray-100"
           onClick={onClose}
         >
-          Done
+          Cancel
+        </button>
+        <button
+          type="button"
+          className="px-4 py-2 rounded bg-purple-600 text-white font-semibold hover:bg-purple-700"
+          onClick={handleSubmit}
+        >
+          Save Branding
         </button>
       </div>
     </div>
