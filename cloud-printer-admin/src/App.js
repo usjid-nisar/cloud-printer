@@ -37,7 +37,7 @@ export default function App() {
 
         {/* Private Routes */}
         <Route 
-          path="/dashboard" 
+          path="/" 
           element={
             <PublicRoute>
               <Dashboard />
@@ -45,11 +45,11 @@ export default function App() {
           } 
         />
 
-        {/* Redirect root to login
+        {/* Redirect root to login */}
         <Route path="/" element={<Navigate to="/login" replace />} />
 
         {/* 404 Route */}
-        {/* <Route path="*" element={<Navigate to="/login" replace />} /> */} */}
+        <Route path="*" element={<Navigate to="/login" replace />} />
       </Routes>
     </Router>
   );
