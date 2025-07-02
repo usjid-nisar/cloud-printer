@@ -1,8 +1,14 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
+import { logout } from "../services/auth";
 
 const Sidebar = () => {
   const location = useLocation();
+  
+  const handleLogout = () => {
+    logout();
+  };
+
   return (
     <div className="bg-[#6C47FF] text-white w-64 min-h-screen flex flex-col justify-between">
       <div>
@@ -17,14 +23,16 @@ const Sidebar = () => {
             <span className="material-icons">dashboard</span>
             Dashboard
           </Link>
-          <Link to="#" className="flex items-center gap-3 px-8 py-3 rounded-lg mb-2 hover:bg-white hover:bg-opacity-10">
+          {/* <Link to="#" className="flex items-center gap-3 px-8 py-3 rounded-lg mb-2 hover:bg-white hover:bg-opacity-10">
             <span className="material-icons">groups</span>
             Clients
-          </Link>
+          </Link> */}
         </nav>
       </div>
       <div className="px-8 py-8">
-        <button className="flex items-center gap-2 text-white hover:underline">
+        <button 
+          onClick={handleLogout}
+          className="flex items-center gap-2 text-white">
           <span className="material-icons">logout</span>
           Logout
         </button>

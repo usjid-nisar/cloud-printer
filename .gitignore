@@ -10,3 +10,4 @@
 /tests-results
 /tests-results-html
 .env
+logs/
