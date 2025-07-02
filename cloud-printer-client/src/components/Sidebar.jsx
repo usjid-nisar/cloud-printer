@@ -1,8 +1,16 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { MdDashboard, MdListAlt, MdBarChart, MdSettings, MdToggleOn, MdLogout } from "react-icons/md";
+import { logout } from "../services/auth";
 
 export default function Sidebar() {
   const location = useLocation();
+  const navigate = useNavigate();
+
+  const handleLogout = async () => {
+    await logout();
+    navigate('/login');
+  };
+
   return (
     <aside className="w-64 h-screen bg-purple-700 flex flex-col justify-between py-6 px-4">
       <div>
@@ -27,27 +35,31 @@ export default function Sidebar() {
             active={location.pathname === "/order-status"}
           />
           <SidebarItem 
-          icon={<MdBarChart size={20} />} 
-          label="Fulfilment Metrics"
-          to="/fulfillment-metrics"
-          active={location.pathname === "/fulfillment-metrics"}
-           />
+            icon={<MdBarChart size={20} />} 
+            label="Fulfilment Metrics"
+            to="/fulfillment-metrics"
+            active={location.pathname === "/fulfillment-metrics"}
+          />
           <SidebarItem 
-          icon={<MdSettings size={20} />}
-           label="Settings" 
-           to="/settings"
-          active={location.pathname === "/settings"}
-           />
-
-          <SidebarItem icon={<MdToggleOn size={20} />}
-           label="Forwarding Toggle"
-           to="/forwarding-toggle"
-          active={location.pathname === "/forwarding-toggle"}
-           />
+            icon={<MdSettings size={20} />}
+            label="Settings" 
+            to="/settings"
+            active={location.pathname === "/settings"}
+          />
+          <SidebarItem 
+            icon={<MdToggleOn size={20} />}
+            label="Forwarding Toggle"
+            to="/forwarding-toggle"
+            active={location.pathname === "/forwarding-toggle"}
+          />
         </nav>
       </div>
+      
       <div>
-        <button className="flex items-center gap-2 text-white px-2 py-2 rounded hover:bg-purple-800 w-full">
+        <button 
+          onClick={handleLogout}
+          className="flex items-center gap-2 text-white px-2 py-2 rounded hover:bg-purple-800 w-full"
+        >
           <MdLogout size={18} />
           Logout
         </button>

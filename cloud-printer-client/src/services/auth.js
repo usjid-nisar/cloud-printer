@@ -37,11 +37,11 @@ export async function login(email, password, rememberMe) {
   }
 }
 
-export async function register({ email, password, firstName, lastName, partnerId }) {
+export async function register({ email, password, firstName, lastName }) {
   try {
-    if (!partnerId) {
-      throw new Error('Partner ID is required for registration');
-    }
+    // if (!partnerId) {
+    //   throw new Error('Partner ID is required for registration');
+    // }
 
     const response = await fetch(`${API_CONFIG.BASE_URL}/api/auth/register`, {
       method: 'POST',
@@ -54,7 +54,7 @@ export async function register({ email, password, firstName, lastName, partnerId
         firstName,
         lastName,
         role: 'client',
-        partnerId
+        // partnerId: '1234567890'
       }),
     });
 
@@ -64,16 +64,16 @@ export async function register({ email, password, firstName, lastName, partnerId
     }
 
     const data = await response.json();
-    
+      
     // Verify that the user is a client
     if (data.user.role !== 'client') {
       throw new Error('Invalid registration. Client access only.');
     }
 
-    // Verify that the user has the correct partnerId
-    if (data.user.partnerId !== partnerId) {
-      throw new Error('Invalid registration. Partner mismatch.');
-    }
+    // // Verify that the user has the correct partnerId
+    // if (data.user.partnerId !== partnerId) {
+    //   throw new Error('Invalid registration. Partner mismatch.');
+    // }
     
     // Store the token and user data
     localStorage.setItem('token', data.token);

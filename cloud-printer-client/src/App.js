@@ -14,85 +14,90 @@ function PrivateRoute({ children }) {
 }
 
 function PublicRoute({ children }) {
-  return !isAuthenticated() ? children : <Navigate to="/dashboard" />;
+  return !isAuthenticated() ? children : <Navigate to="/" />;
 }
 
 export default function App() {
   return (
-  <OrdersProvider>
-    <Router>
-      <Routes>
-        {/* Public Routes */}
-        <Route 
-          path="/login" 
-          element={
-            <PublicRoute>
-              <Login />
-            </PublicRoute>
-          } 
-        />
-        <Route 
-          path="/register" 
-          element={
-            <PublicRoute>
-              <CreateAccount />
-            </PublicRoute>
-          } 
-        />
+    <OrdersProvider>
+      <Router>
+        <Routes>
+          {/* Public Routes */}
+          <Route 
+            path="/login" 
+            element={
+              <PublicRoute>
+                <Login />
+              </PublicRoute>
+            } 
+          />
+          <Route 
+            path="/register" 
+            element={
+              <PublicRoute>
+                <CreateAccount />
+              </PublicRoute>
+            } 
+          />
 
-        {/* Private Routes */}
-        <Route 
-        path="/" 
-        element={
-          <PublicRoute>
-            <Dashboard />
-          </PublicRoute>
-        } 
-      />
-      <Route 
-        path="/order-status" 
-        element={
-          <PublicRoute>
-            <OrderStatus />
-          </PublicRoute>
-        } 
-        />
+          {/* Private Routes */}
+          <Route 
+            path="/" 
+            element={
+              <PrivateRoute>
+                <Dashboard />
+              </PrivateRoute>
+            } 
+          />
+          <Route 
+            path="/order-status" 
+            element={
+              <PrivateRoute>
+                <OrderStatus />
+              </PrivateRoute>
+            } 
+          />
 
-        <Route 
-        path="/fulfillment-metrics" 
-        element={
-          <PublicRoute>
-        <FulfillmentMetrics />
-        </PublicRoute>
-      } 
-        />
+          <Route 
+            path="/fulfillment-metrics" 
+            element={
+              <PrivateRoute>
+                <FulfillmentMetrics />
+              </PrivateRoute>
+            } 
+          />
 
-         <Route 
-        path="/settings" 
-        element={
-          <PublicRoute>
-        <Settings />
-        </PublicRoute>
-      } 
-        />
-      <Route 
-        path="/forwarding-toggle" 
-        element={
-          <PublicRoute>
-        <ForwardingToggle />
-        </PublicRoute>
-        }
-        />
-        
+          <Route 
+            path="/settings" 
+            element={
+              <PrivateRoute>
+                <Settings />
+              </PrivateRoute>
+            } 
+          />
+          <Route 
+            path="/forwarding-toggle" 
+            element={
+              <PrivateRoute>
+                <ForwardingToggle />
+              </PrivateRoute>
+            }
+          />
 
+          {/* Redirect root to dashboard if authenticated, otherwise to login */}
+          <Route 
+            path="/" 
+            element={
+              isAuthenticated() ? 
+                <Navigate to="/" replace /> : 
+                <Navigate to="/login" replace />
+            } 
+          />
 
-        {/* Redirect root to login */}
-        {/* <Route path="/" element={<Navigate to="/login" replace />} /> */}
-
-        {/* 404 Route */}
-        {/* <Route path="*" element={<Navigate to="/login" replace />} /> */}
-      </Routes>
-    </Router>
+          {/* 404 Route */}
+          <Route path="*" element={<Navigate to="/login" replace />} />
+        </Routes>
+      </Router>
     </OrdersProvider>
   );
 }
