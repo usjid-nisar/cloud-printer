@@ -17,7 +17,7 @@ export default function Sidebar() {
           <SidebarItem
             icon={<MdDashboard size={20} />}
             label="Dashboard"
-            to="/dashboard"
+            to="/"
             active={location.pathname === "/dashboard"}
           />
           <SidebarItem
