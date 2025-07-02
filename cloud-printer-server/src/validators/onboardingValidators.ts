@@ -32,7 +32,7 @@ export const createPartnerSchema = z.object({
   email: z.string().email(),
   domain: z.string().url().optional(),
   selfProduce: z.boolean().optional(),
-  brandingSettings: brandingDataSchema,
+  brandingData: brandingDataSchema.optional(),
 }).strict();
 
 // Update branding schema
