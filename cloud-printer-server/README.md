@@ -54,16 +54,17 @@ WOOCOMMERCE_SECRET=your-woocommerce-secret
 ## Installation
 
 1. Install dependencies:
+
    ```bash
    npm install
    ```
-
 2. Generate Prisma client:
+
    ```bash
    npx prisma generate
    ```
-
 3. Run database migrations:
+
    ```bash
    npx prisma migrate dev
    ```
@@ -71,11 +72,13 @@ WOOCOMMERCE_SECRET=your-woocommerce-secret
 ## Development
 
 Start the development server:
+
 ```bash
 npm run dev
 ```
 
 Build the TypeScript code:
+
 ```bash
 npm run build
 ```
@@ -83,11 +86,12 @@ npm run build
 ## Docker Setup
 
 1. Build and start services:
+
    ```bash
    docker-compose up --build
    ```
-
 2. Run migrations in Docker:
+
    ```bash
    docker-compose exec api npx prisma migrate dev
    ```
@@ -95,8 +99,9 @@ npm run build
 ## API Documentation
 
 Once the server is running, access the Swagger documentation at:
+
 ```
-http://localhost:3000/api-docs
+http://localhost:3000/docs
 ```
 
 ## API Endpoints
@@ -129,6 +134,7 @@ http://localhost:3000/api-docs
 ## Testing
 
 Run the test suite:
+
 ```bash
 npm test
 ```
@@ -156,4 +162,4 @@ npm test
 
 ## License
 
-MIT 
+MIT

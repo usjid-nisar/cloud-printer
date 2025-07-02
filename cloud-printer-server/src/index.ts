@@ -33,6 +33,7 @@ app.use(cors({
   origin: [
     'http://localhost:3000',  // Admin frontend
     'http://localhost:3002',  // Client frontend
+    'http://localhost:8000',  // Backend API
   ],
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
@@ -69,7 +70,7 @@ const swaggerOptions = {
     },
     servers: [
       {
-        url: process.env.API_URL || 'http://localhost:3000',
+        url: process.env.API_URL || 'http://localhost:8000',
         description: process.env.NODE_ENV === 'production' ? 'Production server' : 'Development server',
       },
     ],
@@ -92,7 +93,7 @@ const swaggerOptions = {
 };
 
 const swaggerDocs = swaggerJsdoc(swaggerOptions);
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
+app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 
 // API routes
 app.use('/api/auth', authRoutes);
@@ -122,7 +123,7 @@ process.on('uncaughtException', uncaughtExceptionHandler);
 process.on('unhandledRejection', unhandledRejectionHandler);
 
 // Start server
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8000;
 
 const startServer = async () => {
   try {
@@ -133,7 +134,7 @@ const startServer = async () => {
     // Start listening
     app.listen(PORT, () => {
       logger.info(`Server is running on port ${PORT}`);
-      logger.info(`API Documentation available at http://localhost:${PORT}/api-docs`);
+      logger.info(`API Documentation available at http://localhost:${PORT}/docs`);
     });
   } catch (error) {
     logger.error('Failed to start server:', error);
