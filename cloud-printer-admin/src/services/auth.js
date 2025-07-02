@@ -37,6 +37,7 @@ export async function login(email, password, rememberMe) {
   }
 }
 
+// This function is only for the initial admin setup
 export async function register({ email, password, firstName, lastName }) {
   try {
     const response = await fetch(`${API_CONFIG.BASE_URL}/api/auth/register`, {
@@ -70,9 +71,14 @@ export async function register({ email, password, firstName, lastName }) {
   }
 }
 
+// This function is for creating additional admin users by an existing admin
 export async function createAdminUser({ email, password, firstName, lastName }) {
   try {
     const token = getToken();
+    if (!token) {
+      throw new Error('Authentication required');
+    }
+
     const response = await fetch(`${API_CONFIG.BASE_URL}/api/auth/admin`, {
       method: 'POST',
       headers: {
@@ -102,6 +108,10 @@ export async function createAdminUser({ email, password, firstName, lastName }) 
 export async function getCurrentUser() {
   try {
     const token = getToken();
+    if (!token) {
+      throw new Error('Authentication required');
+    }
+
     const response = await fetch(`${API_CONFIG.BASE_URL}/api/auth/me`, {
       headers: {
         'Authorization': `Bearer ${token}`
@@ -113,6 +123,9 @@ export async function getCurrentUser() {
     }
 
     const user = await response.json();
+    if (user.role !== 'admin') {
+      throw new Error('Unauthorized. Admin access only.');
+    }
     return user;
   } catch (error) {
     throw error;
@@ -122,12 +135,14 @@ export async function getCurrentUser() {
 export async function logout() {
   try {
     const token = getToken();
-    await fetch(`${API_CONFIG.BASE_URL}/api/auth/logout`, {
-      method: 'POST',
-      headers: {
-        'Authorization': `Bearer ${token}`
-      },
-    });
+    if (token) {
+      await fetch(`${API_CONFIG.BASE_URL}/api/auth/logout`, {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${token}`
+        },
+      });
+    }
   } catch (error) {
     console.error('Logout error:', error);
   } finally {

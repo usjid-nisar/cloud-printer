@@ -65,6 +65,16 @@ export async function register({ email, password, firstName, lastName, partnerId
 
     const data = await response.json();
     
+    // Verify that the user is a client
+    if (data.user.role !== 'client') {
+      throw new Error('Invalid registration. Client access only.');
+    }
+
+    // Verify that the user has the correct partnerId
+    if (data.user.partnerId !== partnerId) {
+      throw new Error('Invalid registration. Partner mismatch.');
+    }
+    
     // Store the token and user data
     localStorage.setItem('token', data.token);
     localStorage.setItem('user', JSON.stringify(data.user));
@@ -78,6 +88,10 @@ export async function register({ email, password, firstName, lastName, partnerId
 export async function getCurrentUser() {
   try {
     const token = getToken();
+    if (!token) {
+      throw new Error('Authentication required');
+    }
+
     const response = await fetch(`${API_CONFIG.BASE_URL}/api/auth/me`, {
       headers: {
         'Authorization': `Bearer ${token}`
@@ -89,6 +103,9 @@ export async function getCurrentUser() {
     }
 
     const user = await response.json();
+    if (user.role !== 'client') {
+      throw new Error('Unauthorized. Client access only.');
+    }
     return user;
   } catch (error) {
     throw error;
@@ -98,12 +115,14 @@ export async function getCurrentUser() {
 export async function logout() {
   try {
     const token = getToken();
-    await fetch(`${API_CONFIG.BASE_URL}/api/auth/logout`, {
-      method: 'POST',
-      headers: {
-        'Authorization': `Bearer ${token}`
-      },
-    });
+    if (token) {
+      await fetch(`${API_CONFIG.BASE_URL}/api/auth/logout`, {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${token}`
+        },
+      });
+    }
   } catch (error) {
     console.error('Logout error:', error);
   } finally {

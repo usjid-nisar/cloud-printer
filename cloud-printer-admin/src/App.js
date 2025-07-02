@@ -1,6 +1,5 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Login from './pages/Login';
-import CreateAccount from './pages/CreateAccount';
 import { isAuthenticated } from './services/auth';
 import Dashboard from "./pages/Dashboard";
 
@@ -23,14 +22,6 @@ export default function App() {
           element={
             <PublicRoute>
               <Login />
-            </PublicRoute>
-          } 
-        />
-        <Route 
-          path="/register" 
-          element={
-            <PublicRoute>
-              <CreateAccount />
             </PublicRoute>
           } 
         />

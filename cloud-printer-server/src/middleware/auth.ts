@@ -241,6 +241,22 @@ export const authenticate = async (
       throw new AppError('Invalid or expired token', 401);
     }
 
+    // Verify user is active
+    if (!user.isActive) {
+      throw new AppError('Account is deactivated', 401);
+    }
+
+    // For client users, verify partner exists and is active
+    if (user.role === 'client' && user.partnerId) {
+      const partner = await prisma.partner.findUnique({
+        where: { id: user.partnerId }
+      });
+      
+      if (!partner) {
+        throw new AppError('Invalid partner association', 401);
+      }
+    }
+
     // Attach user to request
     req.user = user;
     next();
@@ -250,12 +266,23 @@ export const authenticate = async (
 };
 
 export const requireRole = (roles: string[]) => {
-  return (req: Request, res: Response, next: NextFunction) => {
+  return async (req: Request, res: Response, next: NextFunction) => {
     if (!req.user) {
       return next(new AppError('Authentication required', 401));
     }
 
     if (!roles.includes(req.user.role)) {
+      await auditService.logEvent(AuditEventType.SECURITY_EVENT, {
+        partnerId: req.user.partnerId,
+        ipAddress: req.ip,
+        userAgent: req.headers['user-agent'],
+        details: {
+          event: 'unauthorized_access_attempt',
+          requiredRoles: roles,
+          userRole: req.user.role,
+          path: req.path,
+        },
+      });
       return next(new AppError('Unauthorized access', 403));
     }
 
@@ -264,7 +291,7 @@ export const requireRole = (roles: string[]) => {
 };
 
 // Middleware to ensure client users can only access their partner's data
-export const restrictToPartner = (
+export const restrictToPartner = async (
   req: Request,
   res: Response,
   next: NextFunction
@@ -280,8 +307,32 @@ export const restrictToPartner = (
 
   // Client users can only access their partner's data
   const requestedPartnerId = req.params.partnerId || req.body.partnerId;
+  if (!requestedPartnerId) {
+    return next(new AppError('Partner ID is required', 400));
+  }
+
   if (req.user.partnerId !== requestedPartnerId) {
+    await auditService.logEvent(AuditEventType.SECURITY_EVENT, {
+      partnerId: req.user.partnerId,
+      ipAddress: req.ip,
+      userAgent: req.headers['user-agent'],
+      details: {
+        event: 'unauthorized_partner_access_attempt',
+        requestedPartnerId,
+        userPartnerId: req.user.partnerId,
+        path: req.path,
+      },
+    });
     return next(new AppError('Unauthorized access', 403));
+  }
+
+  // Verify partner exists and is active
+  const partner = await prisma.partner.findUnique({
+    where: { id: requestedPartnerId }
+  });
+
+  if (!partner) {
+    return next(new AppError('Partner not found', 404));
   }
 
   next();
